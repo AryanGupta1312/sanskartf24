@@ -7,6 +7,10 @@ body{
     margin: 1rem;
 }
 
-.header .img1{
+/* .header .img1{
     border-radius: 12px;
+} */
+
+.header .ht{
+    justify-content: flex-end;
 }
