@@ -1,0 +1,12 @@
+body{
+    background-color: #1c2527;
+    color: #d3d4db;
+}
+
+.header{
+    margin: 1rem;
+}
+
+.header .img1{
+    border-radius: 12px;
+}
