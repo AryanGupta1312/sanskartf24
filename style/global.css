@@ -52,21 +52,19 @@ body {
 }
 
 .main{
+  align-self: center;
   border: 1px solid black;
-  width: 400px;
-  height: 500px;
   background-image: url('https://files.oaiusercontent.com/file-zyRWcofsDcztLBoaBWfrsyUN?se=2024-10-10T07%3A12%3A15Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd9cb4316-4f95-480d-acbf-ef6630bfffa1.webp&sig=82M3q5L6i8/Hg0cpEx5Vhg5LWsCwLSWE4FMhB/nj7Aw%3D') ;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   border-radius: 20px;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.75);
-  background-size: cover;
   background-position: center;
   overflow: hidden;
 }
 
-.h1,h2{
+.main p{
   display: block;
   box-sizing: border-box;
   padding: 40px;
