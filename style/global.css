@@ -6,7 +6,7 @@ body{
 }
 
 .header{
-  background-image: url(lol.png);
+  background-image: url('lol.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
