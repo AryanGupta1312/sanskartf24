@@ -54,7 +54,7 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  background: url('https://files.oaiusercontent.com/file-zyRWcofsDcztLBoaBWfrsyUN?se=2024-10-10T07%3A12%3A15Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd9cb4316-4f95-480d-acbf-ef6630bfffa1.webp&sig=82M3q5L6i8/Hg0cpEx5Vhg5LWsCwLSWE4FMhB/nj7Aw%3D') ;
+  background-image: url('https://lens.google.com/search?ep=gisbubb&hl=en-IN&re=df&p=AbrfA8rGKQWCipluCEwsa6UTg_k_QyQAKnubyS1BWu22SuyeC8XtPEugdSmfB6nG1NwSK1pHiy6G2sVVDd9u6H4qjU3sOAxM3mjYZZofZvNIzcQDzwaAIRsdzc54ktO0yTRfS21d7tlL-biO9ebNTwMLcTBix1Bl_mlzRhpHJ9G6S3yrKz_uSIrnvFMjN5igvQ1i7ZFQZpcOzsMuKQ%3D%3D#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKRE5rT0RkbE16WXdMVEk1TTJZdE5EbGhPUzFpWTJFNUxUY3pPVFkxTm1FNVlqbGtNUklmZHpCUFpHSm1SM1JHY205UmMwWldkMUYzZG5veE4wZHRkRmcxTUVwNGF3PT0iLG51bGwsbnVsbCxudWxsLDEsbnVsbCxbbnVsbCxudWxsLFswLDAsMTAwMDAwLDEwMDAwMF1dLG51bGwsWyJkNjVmYzljZi0yM2VmLTRjNjMtYmRkNC01MmVlZGQwNWNlNTgiXV0=') ;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -88,9 +88,6 @@ body {
   padding: 100px;
   width: 100%;
   height: 100%;
-  backdrop-filter: brightness(50%);
-  flex-direction: column;
-  display: flex;
   gap: 10px;
   font-weight: normal;
   font-size: 50px;
