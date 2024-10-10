@@ -1,3 +1,53 @@
-const somefunc = () => {
-    return;
+// Dark Mode Toggle
+const darkModeSwitch = document.getElementById('dark-mode-switch');
+darkModeSwitch.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+// Particle.js Initialization
+particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('particles.js loaded');
+});
+
+// Counter Animation
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+    counter.innerText = '0';
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 200;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCounter, 10);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCounter();
+});
+
+// Three.js 3D Model Rendering
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.getElementById('3d-model').appendChild(renderer.domElement);
+
+const geometry = new THREE.SphereGeometry(1, 32, 32);
+const material = new THREE.MeshBasicMaterial({ color: 0x0077be, wireframe: true });
+const sphere = new THREE.Mesh(geometry, material);
+scene.add(sphere);
+
+camera.position.z = 5;
+
+function animate() {
+    requestAnimationFrame(animate);
+    sphere.rotation.x += 0.01;
+    sphere.rotation.y += 0.01;
+    renderer.render(scene, camera);
 }
+animate();
