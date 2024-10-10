@@ -9,7 +9,7 @@
   font-weight: bold;
   font-style: normal;
 }
-  
+
 body {
   font-family: 'Agency FB', Arial, sans-serif;
   background-color: #1c2527;
@@ -54,7 +54,7 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  background-image: url('https://files.oaiusercontent.com/file-zyRWcofsDcztLBoaBWfrsyUN?se=2024-10-10T07%3A12%3A15Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd9cb4316-4f95-480d-acbf-ef6630bfffa1.webp&sig=82M3q5L6i8/Hg0cpEx5Vhg5LWsCwLSWE4FMhB/nj7Aw%3D') ;
+  background: url('https://files.oaiusercontent.com/file-zyRWcofsDcztLBoaBWfrsyUN?se=2024-10-10T07%3A12%3A15Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd9cb4316-4f95-480d-acbf-ef6630bfffa1.webp&sig=82M3q5L6i8/Hg0cpEx5Vhg5LWsCwLSWE4FMhB/nj7Aw%3D') ;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
