@@ -1,111 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SDG 14: Life Below Water</title>
+    <title>SDG 14 - Life Below Water</title>
     <link rel="stylesheet" href="style/global.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
-</head>
-<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 
-    <div id="particles-js"></div>
-    
+</head>
+
+<body>
+  
+<!-- Heading -->
+<header class="header-section">
+<img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4?fit=crop&w=1500&h=1000&q=80" 
+         alt="Underwater Background" class="background-image">
+    <!-- YouTube video embedded as background -->
+    <iframe class="video-background" src="https://www.youtube.com/embed/8U_nLVItqdw?autoplay=1&mute=1&loop=1&playlist=8U_nLVItqdw&controls=0" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+    <div class="header-wrapper">
+        <h1 class="main-title">Sustainable Development Goal 14</h1>
+        <p class="header-description">Life Below Water - Conserve and sustainably use the oceans, seas, and marine resources for sustainable development.</p>
+    </div>
+   </header>
+
+    <!-- Navigation Bar -->
     <nav>
         <ul>
-            <li><a href="#intro"> Introduction </a></li>
-            <li><a href="#challenges"> Challenges </a></li>
-            <li><a href="#goals"> Goals </a></li>
-            <li><a href="#actions"> Actions </a></li>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#challenges">Challenges</a></li>
+            <li><a href="#goals">Goals</a></li>
+            <li><a href="#actions">Take Action</a></li>
         </ul>
     </nav>
-    
-    <header>
-        <div class="overlay">
-            <h1>SDG 14: Life Below Water</h1>
-            <p>Conserve and sustainably use the oceans, seas, and marine resources.</p>
-            <a href="#actions" class="cta-btn involve-btn">Get Involved</a>
-            <div id="3d-model"></div>
-        </div>
-    </header>
-    
-    <!-- <div class="dark-mode-toggle">
-        <label for="dark-mode-switch">Dark Mode</label>
-        <input type="checkbox" id="dark-mode-switch">
-    </div> -->
 
-    <section id="intro" class="fade-in">
-        <div class="content">
-            <h2><i class="fas fa-water"></i> Introduction</h2>
-            <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWU1cnZiMThpaHRkc3hwd2kzcTM3M3hwaWwzOHpxaHFhcHNsNnlwciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/798oH0WDEQnicM4857/giphy.webp" alt="Ocean Waves" class="intro-gif">
-            <p>The ocean generates 50% of the oxygen we breathe. SDG 14 seeks to protect these essential ecosystems from exploitation and pollution.</p>
-        </div>
+    <!-- Introduction Section -->
+    <section id="intro">
+        <h2>Introduction</h2>
+        <p>The ocean is home to millions of species and regulates our climate. It's vital for sustaining life on Earth. Let’s work to protect and restore it.</p>
+        <div class="ocean-img"></div>
     </section>
 
-    <section id="challenges" class="fade-in">
-        <h2><i class="fas fa-exclamation-triangle"></i> Challenges</h2>
-        <div class="counter-wrapper">
-            <div class="counter-item">
-                <i class="fas fa-fish"></i>
-                <span class="counter" data-target="33">0</span>
-                <p>Fish stocks overfished</p>
-            </div>
-            <div class="counter-item">
-                <i class="fas fa-trash"></i>
-                <span class="counter" data-target="8">0</span>
-                <p>Million tons of plastic in oceans annually</p>
-            </div>
-            <div class="counter-item">
-                <i class="fas fa-temperature-high"></i>
-                <span class="counter" data-target="30">0</span>
-                <p>Coral reefs lost due to acidification</p>
-            </div>
+    <!-- Challenges Section -->
+<section id="challenges" class="challenges-section">
+    <h2 class="challenges-title">Challenges We Face</h2>
+    <p class="challenges-description">The oceans face numerous challenges that threaten marine life and ecosystems:</p>
+    <div class="challenge-container">
+        <div class="challenge">
+            <h3>Overfishing</h3>
+            <p>Overfishing depletes fish stocks and disrupts the balance of marine ecosystems, leading to significant biodiversity loss.</p>
         </div>
-    </section>
+        <div class="challenge">
+            <h3>Plastic Pollution</h3>
+            <p>Every year, millions of tons of plastic enter the ocean, harming marine life and entering the food chain.</p>
+        </div>
+        <div class="challenge">
+            <h3>Climate Change</h3>
+            <p>Rising ocean temperatures and acidification threaten coral reefs and other marine habitats, impacting the entire ecosystem.</p>
+        </div>
+        <div class="challenge">
+            <h3>Habitat Destruction</h3>
+            <p>Coastal development and pollution lead to habitat loss for many marine species, disrupting their natural environments.</p>
+        </div>
+        <div class="challenge">
+            <h3>Invasive Species</h3>
+            <p>Invasive species can outcompete native species for resources, altering ecosystems and diminishing biodiversity.</p>
+        </div>
+    </div>
+</section>
 
-    <section id="goals" class="fade-in">
-        <h2><i class="fas fa-bullseye"></i> Goals</h2>
-        <div class="three-d-goals">
-            <div id="ocean-3d"></div>
-        </div>
-        <div class="progress-bars">
-            <div class="goal">
-                <p>Reduce marine pollution</p>
-                <div class="progress-bar"><span style="width: 70%;"></span></div>
-            </div>
-            <div class="goal">
-                <p>Protect marine and coastal ecosystems</p>
-                <div class="progress-bar"><span style="width: 60%;"></span></div>
-            </div>
-            <div class="goal">
-                <p>Address ocean acidification</p>
-                <div class="progress-bar"><span style="width: 50%;"></span></div>
-            </div>
-        </div>
-    </section>
 
-    <section id="actions" class="parallax-section">
-        <div class="content">
-            <h2><i class="fas fa-hands-helping"></i> Take Action</h2>
-            <img src="https://media.giphy.com/media/xThtajKi8fU3rzmOYc/giphy.gif" alt="Ocean Cleanup" class="action-gif">
-            <p>Join initiatives to reduce marine pollution, support biodiversity, and protect ecosystems.</p>
-            <a href="#" class="cta-btn action-btn">Donate Now</a>
+  <!-- Our Goals Section -->
+<section id="goals" class="goals-section">
+    <h2 class="goals-title">Our Goals</h2>
+    <p class="goals-description">We strive to achieve the following goals to ensure the health of our oceans:</p>
+    <div class="goal-container">
+        <div class="goal">
+            <div class="goal-icon">
+                <img src="https://img.icons8.com/ios/50/000000/clean-beach.png" alt="Clean Beaches" />
+            </div>
+            <h3>Reduce Marine Pollution</h3>
+            <p>Implement strategies to reduce waste and pollution in our oceans, promoting cleaner beaches and marine environments.</p>
+            <p>Through community initiatives and legislation, we aim to minimize pollution levels and protect marine habitats.</p>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 SDG 14 Awareness Campaign. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+        <div class="goal">
+            <div class="goal-icon">
+                <img src="https://img.icons8.com/ios/50/000000/fish.png" alt="Protect Marine Biodiversity" />
+            </div>
+            <h3>Protect Marine Biodiversity</h3>
+            <p>Conserve marine ecosystems and protect endangered species by establishing marine protected areas and enforcing regulations.</p>
+            <p>By prioritizing conservation efforts, we aim to restore and maintain the delicate balance of marine life.</p>
         </div>
-    </footer>
+        <div class="goal">
+            <div class="goal-icon">
+                <img src="https://img.icons8.com/ios/50/000000/recycle.png" alt="Sustainable Practices" />
+            </div>
+            <h3>Promote Sustainable Practices</h3>
+            <p>Encourage responsible fishing and tourism practices to ensure the long-term sustainability of marine resources.</p>
+            <p>We advocate for sustainable seafood choices and eco-friendly tourism to protect our oceans for future generations.</p>
+        </div>
+        <div class="goal">
+            <div class="goal-icon">
+                <img src="https://img.icons8.com/ios/50/000000/education.png" alt="Awareness and Education" />
+            </div>
+            <h3>Raise Awareness and Education</h3>
+            <p>Educate communities about the importance of ocean conservation and how individuals can contribute.</p>
+            <p>Through workshops, campaigns, and partnerships, we aim to inspire action and foster a culture of stewardship.</p>
+        </div>
+        <div class="goal">
+            <div class="goal-icon">
+                <img src="https://img.icons8.com/ios/50/000000/community.png" alt="Community Engagement" />
+            </div>
+            <h3>Community Engagement</h3>
+            <p>Mobilize local communities to participate in conservation efforts, such as beach cleanups and restoration projects.</p>
+            <p>By building a strong community network, we can amplify our impact and work towards common goals.</p>
+        </div>
+    </div>
+</section>
 
+
+    <!-- Call to Action -->
+<section id="actions" class="cta-section">
+    <h2 class="cta-title">Take Action</h2>
+    <p class="cta-description">Join us in our efforts to restore marine ecosystems and protect ocean life. Together, we can make a difference!</p>
+    <div class="cta-buttons">
+        <a href="#" class="cta-button">Volunteer</a>
+        <a href="#" class="cta-button secondary">Donate</a>
+        <a href="#" class="cta-button secondary">Spread the Word</a>
+    </div>
+</section>
+
+
+    <!-- JavaScript for Lottie and Scroll Animations -->
     <script src="script/script.js"></script>
+
 </body>
+
 </html>

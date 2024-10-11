@@ -1,54 +1,50 @@
-// Dark Mode Toggle
-// const darkModeSwitch = document.getElementById('dark-mode-switch');
-// darkModeSwitch.addEventListener('change', () => {
-//     document.body.classList.toggle('dark-mode');
-// });
 
-// Particle.js Initialization
-particlesJS.load('particles-js', 'particles.json', function() {
-    console.log('particles.js loaded');
+// Lottie Animation for Jellyfish
+lottie.loadAnimation({
+    container: document.getElementById('jellyfish-lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets6.lottiefiles.com/packages/lf20_k8fneg5w.json' // Lottie animation for jellyfish
 });
 
-// Counter Animation
-const counters = document.querySelectorAll('.counter');
-counters.forEach(counter => {
-    counter.innerText = '0';
+// GSAP for smooth scrolling animations
+gsap.registerPlugin(ScrollTrigger);
 
-    const updateCounter = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const increment = target / 200;
-
-        if (count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(updateCounter, 10);
-        } else {
-            counter.innerText = target;
-        }
-    };
-
-    updateCounter();
+gsap.from(".challenge", {
+    scrollTrigger: {
+        trigger: ".challenge",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.3,
 });
 
-// Three.js 3D Model Rendering
+// 3D Model Integration (if you have a 3D model, you can integrate here using Three.js or similar)
+// Example: Three.js setup for fish model
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.getElementById('3d-model').appendChild(renderer.domElement);
+document.getElementById('fish-3d-model').appendChild(renderer.domElement);
 
-const geometry = new THREE.SphereGeometry(1, 32, 32);
-const material = new THREE.MeshBasicMaterial({ color: 0x0077be, wireframe: true});
-const sphere = new THREE.Mesh(geometry, material);
-scene.add(sphere);
+// Add a simple geometry (a fish) for demonstration
+const geometry = new THREE.SphereGeometry(0.5, 32, 32);
+const material = new THREE.MeshBasicMaterial({ color: 0x94d2bd });
+const fish = new THREE.Mesh(geometry, material);
+scene.add(fish);
 
-camera.position.z = 2;
+camera.position.z = 5;
 
 function animate() {
     requestAnimationFrame(animate);
-    sphere.rotation.x += 0.01;
-    sphere.rotation.y += 0.01;
+    fish.rotation.x += 0.01;
+    fish.rotation.y += 0.01;
     renderer.render(scene, camera);
 }
 animate();
-	
+
