@@ -1,8 +1,8 @@
 // Dark Mode Toggle
-const darkModeSwitch = document.getElementById('dark-mode-switch');
-darkModeSwitch.addEventListener('change', () => {
-    document.body.classList.toggle('dark-mode');
-});
+// const darkModeSwitch = document.getElementById('dark-mode-switch');
+// darkModeSwitch.addEventListener('change', () => {
+//     document.body.classList.toggle('dark-mode');
+// });
 
 // Particle.js Initialization
 particlesJS.load('particles-js', 'particles.json', function() {
@@ -38,11 +38,11 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('3d-model').appendChild(renderer.domElement);
 
 const geometry = new THREE.SphereGeometry(1, 32, 32);
-const material = new THREE.MeshBasicMaterial({ color: 0x0077be, wireframe: true });
+const material = new THREE.MeshBasicMaterial({ color: 0x0077be, wireframe: true});
 const sphere = new THREE.Mesh(geometry, material);
 scene.add(sphere);
 
-camera.position.z = 5;
+camera.position.z = 2;
 
 function animate() {
     requestAnimationFrame(animate);
@@ -51,3 +51,4 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate();
+	
