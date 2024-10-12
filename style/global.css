@@ -628,7 +628,7 @@ footer {
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('https://www.youtube.com/embed/8U_nLVItqdw?autoplay=1&mute=1&loop=1&playlist=8U_nLVItqdw&controls=0') repeat-x; /* Underwater background image */
+        background: url('https://images.unsplash.com/photo-1562077717-179a9c7baed4?fit=crop&w=1500&q=80') repeat-x; /* Underwater background image */
         opacity: 0.6;
         animation: moveBackground 20s linear infinite; /* Infinite smooth horizontal movement */
     }
