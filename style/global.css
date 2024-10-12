@@ -620,3 +620,50 @@ footer {
           z-index: 0;
           opacity: 0.5; /* Slight transparency to see video better */
       }
+
+       /* Background Animation */
+       .animated-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('https://images.unsplash.com/photo-1562077717-179a9c7baed4?fit=crop&w=1500&q=80') repeat-x; /* Underwater background image */
+        opacity: 0.6;
+        animation: moveBackground 20s linear infinite; /* Infinite smooth horizontal movement */
+    }
+
+    /* Keyframes for moving background */
+    @keyframes moveBackground {
+        0% {
+            transform: translateX(0); /* Start from original position */
+        }
+        100% {
+            transform: translateX(-2000px); /* End of the loop */
+        }
+    }
+
+    /* Light Overlay */
+    .light-effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+        opacity: 0.5;
+        animation: lightMotion 6s ease-in-out infinite; /* Infinite light motion */
+    }
+
+    /* Keyframes for light overlay movement */
+    @keyframes lightMotion {
+        0% {
+            transform: translate(0, 0) scale(1);
+        }
+        50% {
+            transform: translate(-50px, -50px) scale(1.1);
+        }
+        100% {
+            transform: translate(0, 0) scale(1);
+        }
+    }
