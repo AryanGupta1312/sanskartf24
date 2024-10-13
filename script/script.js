@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-<script>
+
 document.addEventListener("DOMContentLoaded", function () {
     // Add floating effect after the fade-in animation is done
     setTimeout(function() {
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         Head.style.opacity = "1";
     }, 1200) // 1.2 seconds delay after fade-in animation
 });
-</script>
+
 
 
 gsap.registerPlugin(ScrollTrigger);
