@@ -297,8 +297,12 @@ footer {
       transform: scale(1.1);
   }
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
+}
+.challenge:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Our Goals Section Styles */
@@ -689,7 +693,7 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         animation: bob 1s ease-in-out infinite; /* Head bobbing animation */
-    }
+      }
 
     /* Tentacles */
     .tentacle {
@@ -752,7 +756,7 @@ footer {
     font-size: 18px;
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
+  }
 #copyButton:hover {
   background-color: #0a9396;
   transform: scale(1.05);
@@ -806,25 +810,17 @@ footer {
 }
 
 .dev1, .dev2{
-  background-color: rgb(9, 136, 233);
+  background-color: #005f73; /* Darker teal background for goals */
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* padding: 20px; */
-  max-width: 300px;
-  text-align: center;
-  margin: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-.challenge:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .t1 {
   font-size: 1.5rem;
-    color: #005c99; /* Dark blue */
+    color: #00ffff; /* Dark blue */
     margin-bottom: 40px;
     font-weight: 600; /* Bold for heading */
     letter-spacing: 1px; /* Slight spacing for elegance */
@@ -832,7 +828,7 @@ footer {
 
 .t2{
   font-size: 1rem;
-  color: #555; /* Softer color for bio */
+  color: #00ffff; /* Softer color for bio */
   line-height: 1;
   font-weight: 400;
 }
