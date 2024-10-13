@@ -7,6 +7,7 @@ body {
   color: white;
   background: linear-gradient(135deg, #001f3f 50%, #005f73 50%);
   overflow-x: hidden;
+  scrollbar-width: 5px;
 }
 
 h1, h2 {
@@ -18,7 +19,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 4;
+  z-index: 3;
 }
 
 nav ul {
@@ -430,35 +431,8 @@ footer {
         height: 100px;
         background: url('https://i.ibb.co/Kqtfvhf/image.png') no-repeat;
         background-size: contain;
-        animation: swim 15s linear infinite;
         animation-timing-function: linear;
         display: block; 
-    }
-
-    /* Fish 1 */
-    .fish1 {
-        top: 20%;
-        animation-duration: 15s;
-        animation: swim-left-to-right 15s linear infinite;
-        transform: scaleX(-1); 
-    }
-
-    /* Fish 2 */
-    .fish2 {
-        top: 50%;
-        animation-duration: 20s;
-        animation-delay: 3s;
-        animation: swim-right-to-left 20s linear infinite;
-    }
-
-    /* Fish 3 */
-    .fish3 {
-        top: 75%;
-        animation-duration: 25s;
-        animation-delay: 6s;
-        animation: swim-left-to-right 25s linear infinite;
-        transform: scaleX(-1); 
-        
     }
 
     /* Bubbles */
@@ -471,44 +445,25 @@ footer {
         border-radius: 50%;
         animation: bubble-up 10s ease-in infinite;
     }
-
-    .bubble:nth-child(2) {
-        left: 20%;
-        animation-delay: 2s;
-    }
-
-    .bubble:nth-child(3) {
-        left: 40%;
-        animation-delay: 4s;
-    }
-
-    .bubble:nth-child(4) {
-        left: 60%;
-        animation-delay: 6s;
-    }
-
-    .bubble:nth-child(5) {
-        left: 80%;
-        animation-delay: 8s;
-    }
+    
 
     /* Keyframes for left to right movement */
     @keyframes swim-left-to-right {
         0% {
-            transform: translateX(2000px) scaleX(-1);
+            transform: translateX(-100vw) scaleX(-1);
         }
         100% {
-            transform: translateX(10%) scaleX(-1);
+            transform: translateX(100vw) scaleX(-1);
         }
     }
 
     /* Keyframes for right to left movement */
     @keyframes swim-right-to-left {
         0% {
-            transform: translateX(150%); /* Start from farther back */
+            transform: translateX(100vw); /* Start from farther back */
         }
         100% {
-            transform: translateX(2000px); /* End off-screen to the left */
+            transform: translateX(-100vw); /* End off-screen to the left */
         }
     }
 
@@ -516,12 +471,12 @@ footer {
     @keyframes bubble-up {
         0% {
             bottom: -50px;
-            transform: scale(0.5);
+            transform: scale(0.5) translateY(100%);
             opacity: 0;
         }
         100% {
             bottom: 100%;
-            transform: scale(1.2);
+            transform: scale(1.2) translateY(-100%);
             opacity: 1;
         }
     }

@@ -24,8 +24,8 @@ gsap.from(".challenge", {
     stagger: 0.3,
 });
 
- // Function to create random positions and animations for fish
-function createFish() {
+  // Function to create random positions and animations for fish
+  function createFish() {
     const fishes = document.querySelectorAll('.fish');
     fishes.forEach((fish) => {
         const randomTop = Math.random() * 100 + 'vh'; // Random vertical position
@@ -43,7 +43,7 @@ function createFish() {
     });
 }
 
-// Function to create random positions and animations for jellyfish
+// Function to create random positions for jellyfish
 function createJellyfish() {
     const jellyfish = document.querySelectorAll('.jellyfish');
     jellyfish.forEach((jelly) => {
@@ -51,7 +51,6 @@ function createJellyfish() {
         const randomLeft = Math.random() * 100 + 'vw'; // Random horizontal position
         jelly.style.top = randomTop;
         jelly.style.left = randomLeft;
-        jelly.style.animation = 'swim-jellyfish 8s ease-in-out infinite';
     });
 }
 
