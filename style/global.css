@@ -15,18 +15,6 @@ body::-webkit-scrollbar{
   display: none;
 }
 
-.sdg14{
-  display: flex;
-  justify-content: left;
-  align-items: right;
-  height: 100px; /* Full height */
-  text-align: right;
-  border-radius: 10px;
-  margin: 10px;
-  position: relative;
-  overflow: hidden; /* Hide overflow */
-}
-
 h1, h2 {
   font-family: 'Raleway', sans-serif;
 }
@@ -471,13 +459,38 @@ footer {
     }
     
     .content {
-        position: relative;
-        z-index: 2;
-        text-align: left;
-        padding: 100px 20px;
-        justify-content: right;
+    position: relative;
+    z-index: 2; /* Bring text above overlay */
+    padding: 20px;
     }
 
+    #goal-heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60vh; /* Adjust height as needed */
+      text-align: center;
+      background-image: url('https://example.com/ocean-background.jpg'); /* Background image */
+      background-size: cover; /* Cover the entire section */
+      background-position: center; /* Center the background image */
+      color: #ffffff; /* White text color */
+      position: relative;
+      overflow: hidden; /* Hide overflow */
+  }
+  
+  /* Overlay to improve text readability */
+  #goal-heading::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      z-index: 1; /* Place overlay behind the text */
+  }
+  
+    
    /* Add keyframes for animations */
 @keyframes fadeInUp {
   0% {
@@ -510,17 +523,13 @@ footer {
 
 /* Style for the heading */
 .heading {
-  font-size: 6rem;
-  font-weight: 700;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 3px;
-  line-height: 1.1;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  font-family: 'Merriweather', serif;
-  margin-top: 30px;
-  
+  font-size: 3em; /* Larger font size for the title */
+  font-weight: bold;
+  margin: 0 0 20px; /* Spacing below the title */
+  letter-spacing: 2px; /* Increased letter spacing */
+  text-transform: uppercase; /* Uppercase for a bold look */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+ 
   /* Updated color gradient */
   background: linear-gradient(90deg, #ffcc00, #0033cc);
   background-size: 200% 200%;
@@ -536,14 +545,12 @@ footer {
 }
 
 .subheading {
-  font-size: 2rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
-  text-align: center;
-  letter-spacing: 2px;
-  margin-top: 15px;
-  font-family: 'Lora', serif;
-  line-height: 1.5;
+  font-size: 1.5em; /* Font size for the subtitle */
+  line-height: 1.5; /* Better line spacing */
+  margin: 0; /* No margin */
+  max-width: 600px; /* Maximum width for the subtitle */
+  margin: 0 auto; /* Center align */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow */
   opacity: 0;
   animation: fadeInUp 1.5s ease-out forwards;
   animation-delay: 0.5s; /* Delay for staggered appearance */
