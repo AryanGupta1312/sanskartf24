@@ -567,44 +567,298 @@ footer {
           border-radius: 8px; /* Rounded corners */
       }
 
-/* YouTube Video Background Styles */
-      .video-background {
-          position: absolute; /* Positioning behind content */
-          top: 50%;
-          left: 50%;
-          min-width: 100%; /* Ensures full width */
-          min-height: 100%; /* Ensures full height */
-          width: auto; /* Auto width */
-          height: auto; /* Auto height */
-          z-index: 0; /* Places video behind text */
-          transform: translate(-50%, -50%); /* Centering video */
-          object-fit: cover; /* Cover the entire section */
-          opacity: 0;
-          animation: fadeInOut 10s ease-in-out infinite; /* Apply fade-in/out animation */
+      body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, #021b79, #0575e6);
+        overflow: hidden;
+    }
+    
+       .content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 100px 20px;
+    }
+
+    .heading {
+        font-size: 4em;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: #eee;
+        letter-spacing: 2px;
+        font-weight: bold;
+        animation: fadeInText 2s ease-in-out;
+    }
+
+    .subheading {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+        letter-spacing: 1.5px;
+        color: #eee;
+        animation: fadeInText 2s ease-in-out;
+    }
+
+    @keyframes fadeInText {
+        0% { opacity: 0; transform: translateY(-20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+
+
+    /* Fish animation */
+    .fish {
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        background: url('https://i.ibb.co/Kqtfvhf/image.png') no-repeat;
+        background-size: contain;
+        animation: swim 15s linear infinite;
+        display: block; 
+    }
+
+    /* Fish 1 */
+    .fish1 {
+        top: 20%;
+        animation-duration: 15s;
+        animation: swim-left-to-right 15s linear infinite;
+        transform: scaleX(-1); 
+    }
+
+    /* Fish 2 */
+    .fish2 {
+        top: 50%;
+        animation-duration: 20s;
+        animation-delay: 3s;
+        animation: swim-right-to-left 20s linear infinite;
+    }
+
+    /* Fish 3 */
+    .fish3 {
+        top: 75%;
+        animation-duration: 25s;
+        animation-delay: 6s;
+        animation: swim-left-to-right 25s linear infinite;
+        transform: scaleX(-1); 
+        
+    }
+
+    /* Bubbles */
+    .bubble {
+        position: absolute;
+        bottom: -50px;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+        animation: bubble-up 10s ease-in infinite;
+    }
+
+    .bubble:nth-child(2) {
+        left: 20%;
+        animation-delay: 2s;
+    }
+
+    .bubble:nth-child(3) {
+        left: 40%;
+        animation-delay: 4s;
+    }
+
+    .bubble:nth-child(4) {
+        left: 60%;
+        animation-delay: 6s;
+    }
+
+    .bubble:nth-child(5) {
+        left: 80%;
+        animation-delay: 8s;
+    }
+
+    /* Keyframes for left to right movement */
+    @keyframes swim-left-to-right {
+        0% {
+            transform: translateX(1400px) scaleX(-1);
+        }
+        100% {
+            transform: translateX(10%) scaleX(-1);
+        }
+    }
+
+    /* Keyframes for right to left movement */
+    @keyframes swim-right-to-left {
+       0% {
+            transform: translateX(150%); /* Start from farther back */
+        }
+        100% {
+            transform: translateX(1400px); /* End off-screen to the left */
+        }
+    }
+
+
+    @keyframes bubble-up {
+        0% {
+            bottom: -50px;
+            transform: scale(0.5);
+        }
+        100% {
+            bottom: 100%;
+            transform: scale(1.2);
+        }
+    }
+
+body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .video-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+  
+
+/* Enhanced Jellyfish Styles */
+    .jellyfish {
+        position: absolute;
+        width: 60px; /* Jellyfish body width */
+        height: 60px; /* Jellyfish body height */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(0, 204, 255, 0.6)); /* Jellyfish body color */
+        border-radius: 50%; /* Circular shape */
+        animation: swim-jellyfish 8s ease-in-out infinite; /* Jellyfish swimming animation */
+        transform: translateX(-50%); /* Centering */
+    }
+
+    /* Jellyfish Head */
+    .jellyfish-head {
+        position: absolute;
+        width: 40px; /* Width of the head */
+        height: 40px; /* Height of the head */
+        background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(0, 204, 255, 0.5)); /* Jellyfish head color */
+        border-radius: 50%; /* Make it circular */
+        top: -20px; /* Position above the jellyfish */
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bob 1s ease-in-out infinite; /* Head bobbing animation */
+    }
+
+    /* Tentacles */
+    .tentacle {
+        position: absolute;
+        width: 4px;
+        height: 60px;
+        background: rgba(0, 204, 255, 0.5); /* Light tentacle color */
+        border-radius: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: move-tentacle 1s ease-in-out infinite alternate;
+        opacity: 0.8; /* Tentacle transparency */
+    }
+
+    /* Position tentacles for Jellyfish */
+    .tentacle1 { bottom: 0; left: 10%; animation-delay: 0s; }
+    .tentacle2 { bottom: 0; left: 30%; animation-delay: 0.1s; }
+    .tentacle3 { bottom: 0; left: 50%; animation-delay: 0.2s; }
+    .tentacle4 { bottom: 0; left: 70%; animation-delay: 0.3s; }
+    .tentacle5 { bottom: 0; left: 90%; animation-delay: 0.4s; }
+
+    /* Jellyfish swimming animation */
+    @keyframes swim-jellyfish {
+        0% {
+            transform: translate(-50%, 0%);
+        }
+        50% {
+            transform: translate(-50%, -20%); /* Jellyfish moves up */
+        }
+        100% {
+            transform: translate(-50%, 0%); /* Jellyfish moves back down */
+        }
+    }
+
+    /* Jellyfish head bobbing animation */
+    @keyframes bob {
+        0%, 100% { top: -20px; }
+        50% { top: -15px; }
+    }
+
+    /* Tentacle movement animation */
+    @keyframes move-tentacle {
+        0% {
+            transform: translateX(-50%) translateY(0); /* Initial position */
+        }
+        100% {
+            transform: translateX(-50%) translateY(10px); /* Move down */
+        }
+    }
+
+.content h1 {
+font-size: 5rem;
+font-weight: 700;
+color: #ffffff;
+background: linear-gradient(90deg, #00c9ff, #92fe9d, #ff6a88, #ff9a8b);
+background-size: 400%;
+-webkit-background-clip: text;
+color: transparent;
+animation: gradientShift 5s ease-in-out infinite;
+text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8),
+             0px 0px 40px rgba(146, 254, 157, 0.5),
+             0px 0px 60px rgba(0, 201, 255, 0.7);
+letter-spacing: 5px;
+transition: transform 0.5s ease-in-out;
+text-transform: uppercase;
+perspective: 500px;
+transform: rotateY(10deg) rotateX(5deg);
 }
 
- @keyframes fadeInOut {
-          0% { opacity: 0; }    /* Start invisible */
-          1% { opacity: 0.1;}
-          2% {opacity: 0.2;}
-          3% {opacity: 0.3;}
-          4% {opacity: 0.4;}
-          5% {opacity: 0.5;}
-          6% {opacity: 0.6;}
-          7% {opacity: 0.7;}
-          8% {opacity: 0.8;}
-          9% {opacity: 0.9;}
-          10% { opacity: 1; }   /* Fade in */
-          90% {opacity: 0.9;} 
-          91% {opacity: 0.8;}
-          92% {opacity: 0.7;}
-          93% {opacity: 0.6;}
-          94% {opacity: 0.5;}
-          95% {opacity: 0.4;}
-          96% {opacity: 0.3;}
-          97% {opacity: 0.2;}
-          98% { opacity: 0.1;}
-          99% { opacity: 1; }   /* Stay visible */
-          100% { opacity: 0; }  /* Fade out */
+.content h1:hover {
+transform: rotateY(15deg) rotateX(30deg) scale(1.1);
+text-shadow: 0px 0px 30px rgba(255, 255, 255, 1),
+             0px 0px 50px rgba(146, 254, 157, 0.6),
+             0px 0px 80px rgba(0, 201, 255, 1);
 }
+
+.content p {
+font-size: 5rem;
+font-weight: 700;
+color: #ffffff;
+background: linear-gradient(90deg, #00c9ff, #92fe9d, #ff6a88, #ff9a8b);
+background-size: 400%;
+-webkit-background-clip: text;
+color: transparent;
+animation: gradientShift 5s ease-in-out infinite;
+text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8),
+             0px 0px 40px rgba(146, 254, 157, 0.5),
+             0px 0px 60px rgba(0, 201, 255, 0.7);
+letter-spacing: 5px;
+transition: transform 0.5s ease-in-out;
+text-transform: uppercase;
+perspective: 500px;
+transform: rotateY(10deg) rotateX(5deg);
+}
+
+.content p:hover {
+transform: rotateY(0deg) rotateX(0deg) scale(1.1);
+text-shadow: 0px 0px 30px rgba(255, 255, 255, 1),
+             0px 0px 50px rgba(146, 254, 157, 0.6),
+             0px 0px 80px rgba(0, 201, 255, 1);
+}
+
+
 
