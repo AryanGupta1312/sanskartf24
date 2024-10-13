@@ -808,7 +808,8 @@ body, html {
         }
     }
 
-.content h1 {
+.heading {
+cursor: default;
 font-size: 5rem;
 font-weight: 700;
 color: #ffffff;
@@ -827,20 +828,21 @@ perspective: 500px;
 transform: rotateY(10deg) rotateX(5deg);
 }
 
-.content h1:hover {
+.heading :hover {
 transform: rotateY(15deg) rotateX(30deg) scale(1.1);
 text-shadow: 0px 0px 30px rgba(255, 255, 255, 1),
              0px 0px 50px rgba(146, 254, 157, 0.6),
              0px 0px 80px rgba(0, 201, 255, 1);
 }
 
-.content p {
+.subheading p {
+cursor: default;
 font-size: 5rem;
 font-weight: 700;
 color: #ffffff;
 background: linear-gradient(90deg, #00c9ff, #92fe9d, #ff6a88, #ff9a8b);
 background-size: 400%;
--webkit-background-clip: text;
+/* -webkit-background-clip: text; */
 color: transparent;
 animation: gradientShift 5s ease-in-out infinite;
 text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8),
@@ -853,7 +855,7 @@ perspective: 500px;
 transform: rotateY(10deg) rotateX(5deg);
 }
 
-.content p:hover {
+.subheading :hover {
 transform: rotateY(0deg) rotateX(0deg) scale(1.1);
 text-shadow: 0px 0px 30px rgba(255, 255, 255, 1),
              0px 0px 50px rgba(146, 254, 157, 0.6),
