@@ -494,7 +494,7 @@ footer {
 
     @keyframes bubble-up {
       0% {
-          transform: translateY(200vh);
+          transform: translateY(100px);
           opacity: 1;
       }
       100% {
