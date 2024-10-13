@@ -9,20 +9,7 @@
 // });
 
 // GSAP for smooth scrolling animations
-gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".challenge", {
-    scrollTrigger: {
-        trigger: ".challenge",
-        start: "top 80%",
-        end: "bottom 20%",
-        toggleActions: "play none none reverse",
-    },
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    stagger: 0.3,
-});
 document.addEventListener("DOMContentLoaded", function() {
     // Function to create random positions and animations for fish
     function createFish() {
@@ -69,4 +56,19 @@ document.addEventListener("DOMContentLoaded", function() {
     createFish();
     createJellyfish();
     createBubbles();
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".challenge", {
+    scrollTrigger: {
+        trigger: ".challenge",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.3,
 });
