@@ -494,11 +494,11 @@ footer {
 
     @keyframes bubble-up {
       0% {
-          transform: translateY(100vh);
+          transform: translateY(1000vh);
           opacity: 1;
       }
       100% {
-          transform: translateY(-20vh);
+          transform: translateY(-200vh);
           opacity: 0;
       }
   }
