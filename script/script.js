@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function createBubbles() {
         const bubbles = document.querySelectorAll('.bubble');
         bubbles.forEach((bubble) => {
-            const randomLeft = Math.random() * 100 + 'vw'; // Random horizontal position
+            const randomLeft = Math.random() * 100 + 'px'; // Random horizontal position
             bubble.style.left = randomLeft;
             bubble.style.animationDelay = Math.random() * 3 + 's'; // Random delay for bubbles
         });
