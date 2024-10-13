@@ -59,13 +59,19 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-    document.addEventListener("DOMContentLoaded", function () {
-        // Add floating effect after the fade-in animation
-        setTimeout(function() {
-            document.querySelector('.heading').classList.add('float');
-            document.querySelector('.subheading').classList.add('float');
-        }, 1200); // Add the float class after the initial fade-in animation
-    });
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Add floating effect after the fade-in animation is done
+    setTimeout(function() {
+        const head = document.querySelector('.heading');
+        head.classList.add('float');
+        head.style.opacity = "1"; // Ensure it remains visible
+        const Head = document.querySelector('.subheading');
+        Head.classList.add('float');
+        Head.style.opacity = "1";
+    }, 1200) // 1.2 seconds delay after fade-in animation
+});
+</script>
 
 
 gsap.registerPlugin(ScrollTrigger);

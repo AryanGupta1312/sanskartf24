@@ -461,12 +461,19 @@ footer {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   font-family: 'Merriweather', serif;
   margin-top: 30px;
-  background: linear-gradient(90deg, #0066ff, #00ccff);
+  
+  /* Updated color gradient */
+  background: linear-gradient(90deg, #ffcc00, #0033cc);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientMove 5s ease infinite, fadeInUp 1.2s ease-out forwards;
-  opacity: 0; /* Start hidden, animation will reveal it */
+  
+  /* Add glow effect */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.6);
+
+  /* Updated animation settings */
+  animation: gradientMove 8s ease infinite, fadeInUp 1.2s ease-out forwards;
+  opacity: 0; /* Start hidden, will fade in */
 }
 
 .subheading {
@@ -480,7 +487,7 @@ footer {
   line-height: 1.5;
   opacity: 0;
   animation: fadeInUp 1.5s ease-out forwards;
-  animation-delay: 0.5s; /* Delay to create a staggered effect */
+  animation-delay: 0.5s; /* Delay for staggered appearance */
 }
 
 /* Floating effect for continuous animation */
