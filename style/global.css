@@ -774,6 +774,7 @@ footer {
   background-color: #94d2bd;
   padding: 60px 40px;
   text-align: center;
+  justify-content: center;
   position: relative;
   overflow: hidden;
   margin: 10px;
@@ -811,6 +812,7 @@ footer {
   background-color: #005f73; /* Darker teal background for goals */
   padding: 20px;
   border-radius: 10px;
+  max-width: 400px;
   transition: transform 0.3s, box-shadow 0.3s;
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
