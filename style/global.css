@@ -86,14 +86,14 @@ nav ul li a:hover {
 }
 
 .intr{
-  font-size: 2.5em; /* Larger font size for the title */
+  font-size: 4em; /* Larger font size for the title */
   font-weight: bold;
   margin: 0 0 20px; /* Spacing below the title */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
 }
 
 .intt{
-  font-size: 1.2em; /* Font size for the paragraph */
+  font-size: 2em; /* Font size for the paragraph */
   line-height: 1.5; /* Better line spacing */
   margin: 0 0 30px; /* Spacing below the paragraph */
 }
