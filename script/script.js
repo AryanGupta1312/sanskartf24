@@ -58,32 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
     createBubbles();
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Make all elements appear smoothly
-    const textElements = document.querySelectorAll('h1, p');
-    const jellyfishElements = document.querySelectorAll('.jellyfish');
-    const fishElements = document.querySelectorAll('.fish');
-    const bubbleElements = document.querySelectorAll('.bubble');
 
-    // Function to make elements appear
-    function makeElementsAppear() {
-        textElements.forEach((el) => {
-            el.style.opacity = 1;
-        });
-        jellyfishElements.forEach((jelly) => {
-            jelly.style.opacity = 1;
-        });
-        fishElements.forEach((fish) => {
-            fish.style.opacity = 1;
-        });
-        bubbleElements.forEach((bubble) => {
-            bubble.style.opacity = 1;
-        });
-    }
-
-    // Delay the appearance for smoother experience
-    setTimeout(makeElementsAppear, 1000);
-});
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".challenge", {
