@@ -23,48 +23,50 @@ gsap.from(".challenge", {
     duration: 1,
     stagger: 0.3,
 });
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to create random positions and animations for fish
+    function createFish() {
+        const fishes = document.querySelectorAll('.fish');
+        fishes.forEach((fish) => {
+            const randomTop = Math.random() * 90 + 'vh'; // Random vertical position
+            const direction = Math.random() > 0.5 ? 'left' : 'right';
+            const animationDuration = Math.random() * 5 + 5; // Random duration between 5-10s
 
- // Function to create random positions and animations for fish
- function createFish() {
-    const fishes = document.querySelectorAll('.fish');
-    fishes.forEach((fish) => {
-        const randomTop = Math.random() * 90 + 'vh'; // Random vertical position
-        const direction = Math.random() > 0.5 ? 'left' : 'right';
-        const animationDuration = Math.random() * 5 + 5; // Random duration between 5-10s
+            fish.style.top = randomTop;
 
-        fish.style.top = randomTop;
+            // Apply appropriate swim animation
+            if (direction === 'left') {
+                fish.style.animation = `swim-left-to-right ${animationDuration}s linear infinite`;
+            } else {
+                fish.style.animation = `swim-right-to-left ${animationDuration}s linear infinite`;
+            }
+        });
+    }
 
-        // Apply appropriate swim animation
-        if (direction === 'left') {
-            fish.style.animation = `swim-left-to-right ${animationDuration}s linear infinite`;
-        } else {
-            fish.style.animation = `swim-right-to-left ${animationDuration}s linear infinite`;
-        }
-    });
-}
+    // Function to create random positions for jellyfish
+    function createJellyfish() {
+        const jellyfish = document.querySelectorAll('.jellyfish');
+        jellyfish.forEach((jelly) => {
+            const randomTop = Math.random() * 90 + 'vh'; // Random vertical position
+            const randomLeft = Math.random() * 100 + 'vw'; // Random horizontal position
+            jelly.style.top = randomTop;
+            jelly.style.left = randomLeft;
+            jelly.style.animationDelay = Math.random() * 5 + 's'; // Random delay for each jellyfish
+        });
+    }
 
-// Function to create random positions for jellyfish
-function createJellyfish() {
-    const jellyfish = document.querySelectorAll('.jellyfish');
-    jellyfish.forEach((jelly) => {
-        const randomTop = Math.random() * 90 + 'vh'; // Random vertical position
-        const randomLeft = Math.random() * 100 + 'vw'; // Random horizontal position
-        jelly.style.top = randomTop;
-        jelly.style.left = randomLeft;
-        jelly.style.animationDelay = Math.random() * 5 + 's'; // Random delay for each jellyfish
-    });
-}
+    // Function to create random positions and animations for bubbles
+    function createBubbles() {
+        const bubbles = document.querySelectorAll('.bubble');
+        bubbles.forEach((bubble) => {
+            const randomLeft = Math.random() * 100 + 'vw'; // Random horizontal position
+            bubble.style.left = randomLeft;
+            bubble.style.animationDelay = Math.random() * 3 + 's'; // Random delay for bubbles
+        });
+    }
 
-// Function to create random positions and animations for bubbles
-function createBubbles() {
-    const bubbles = document.querySelectorAll('.bubble');
-    bubbles.forEach((bubble) => {
-        const randomLeft = Math.random() * 100 + 'vw'; // Random horizontal position
-        bubble.style.left = randomLeft;
-    });
-}
-
-// Initialize animations
-createFish();
-createJellyfish();
-createBubbles();
+    // Initialize animations
+    createFish();
+    createJellyfish();
+    createBubbles();
+});
