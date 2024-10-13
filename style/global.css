@@ -801,30 +801,6 @@ footer {
   color: #021b79;
 }
 
-.dev1 .img1{
-  overflow: hidden;
-  height: 200px;
-  width: 200px;
-  border-radius: 10px;
-  margin-right: 10px;
-}
-
-.dev1 .t1{
-  font-weight: 1000;
-}
-
-.dev2 .img2{
-  overflow: hidden;
-  height: 200px;
-  width: 200px;
-  border-radius: 10px;
-  margin-right: 10px;
-}
-
-.dev2 .t1{
-  font-weight: 1000;
-}
-
 .dev1, .dev2{
   background-color: white;
   border-radius: 10px;
