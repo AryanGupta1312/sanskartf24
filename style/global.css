@@ -66,12 +66,18 @@ section#intro {
   }
 
 .challenges-section{
-  background-color: #d9d9d9;
+  background-color: #e9d8a6;
 }
 
 .challenges-title{
-  font-size: 40px;
-  color: #003c30;
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  color: #005f73;
+}
+
+.challenges-description{
+  font-size: 1.2em;
+  color: #005f73;
 }
 
 .challenge-container {
@@ -82,7 +88,7 @@ section#intro {
 }
 
 .challenge {
-  
+  background-color: #005f73;
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -388,11 +394,20 @@ footer {
     .heading {
         font-size: 4em;
         margin-bottom: 20px;
+        font-weight: 700;
         text-transform: uppercase;
         color: #eee;
         letter-spacing: 2px;
-        font-weight: bold;
         animation: fadeInText 2s ease-in-out;
+        animation: gradientShift 5s ease-in-out infinite;
+        -webkit-background-clip: text; 
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8),
+                     0px 0px 40px rgba(146, 254, 157, 0.5),
+                     0px 0px 60px rgba(0, 201, 255, 0.7);
+        letter-spacing: 5px;
+        transition: transform 0.5s ease-in-out;
+        perspective: 500px;
+        transform: rotateY(10deg) rotateX(5deg);
     }
 
     .subheading {
@@ -401,6 +416,20 @@ footer {
         letter-spacing: 1.5px;
         color: #eee;
         animation: fadeInText 2s ease-in-out;
+        font-weight: 700;
+        background: linear-gradient(90deg, #00c9ff, #92fe9d, #ff6a88, #ff9a8b);
+        background-size: 400%;
+        -webkit-background-clip: text; 
+        color: transparent;
+        animation: gradientShift 5s ease-in-out infinite;
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8),
+                     0px 0px 40px rgba(146, 254, 157, 0.5),
+                     0px 0px 60px rgba(0, 201, 255, 0.7);
+        letter-spacing: 5px;
+        transition: transform 0.5s ease-in-out;
+        text-transform: uppercase;
+        perspective: 500px;
+        transform: rotateY(10deg) rotateX(5deg);
     }
 
     @keyframes fadeInText {
@@ -408,7 +437,7 @@ footer {
         100% { opacity: 1; transform: translateY(0); }
     }
 
- .fish, .jellyfish, .bubble {
+.fish, .jellyfish, .bubble {
     position: absolute;
     will-change: transform;
 }
@@ -424,80 +453,7 @@ footer {
         animation-timing-function: linear;
         display: block; 
     }
-/* 
-    .fish1 {
-      top: 10%;
-      animation-duration: 15s;
-      animation: swim-left-to-right 15s linear infinite;
-      transform: scaleX(-1); 
-    }
 
-    .fish2 {
-      top: 20%;
-      animation-duration: 20s;
-      animation-delay: 3s;
-      animation: swim-right-to-left 20s linear infinite;
-    }
-
-    
-    .fish3 {
-      top: 30%;
-      animation-duration: 15s;
-      animation: swim-left-to-right 15s linear infinite;
-      transform: scaleX(-1); 
-    }
-
-    .fish4 {
-      top: 40%;
-      animation-duration: 20s;
-      animation-delay: 3s;
-      animation: swim-right-to-left 20s linear infinite;
-    }
-
-    .fish5 {
-      top: 50%;
-      animation-duration: 15s;
-      animation: swim-left-to-right 15s linear infinite;
-      transform: scaleX(-1); 
-    }
-
-    .fish6 {
-      top: 60%;
-      animation-duration: 20s;
-      animation-delay: 3s;
-      animation: swim-right-to-left 20s linear infinite;
-    }
-
-    .fish7 {
-      top: 70%;
-      animation-duration: 15s;
-      animation: swim-left-to-right 15s linear infinite;
-      transform: scaleX(-1); 
-    }
-
-    .fish8 {
-      top: 80%;
-      animation-duration: 20s;
-      animation-delay: 3s;
-      animation: swim-right-to-left 20s linear infinite;
-    }
-
-    .fish9 {
-      top: 90%;
-      animation-duration: 15s;
-      animation: swim-left-to-right 15s linear infinite;
-      transform: scaleX(-1); 
-    }
-
-    .fish10 {
-      top: 100%;
-      animation-duration: 20s;
-      animation-delay: 3s;
-      animation: swim-right-to-left 20s linear infinite;
-    } */
-
-
-    /* Bubbles */
     .bubble {
         position: absolute;
         bottom: -50px;
@@ -570,7 +526,7 @@ footer {
         position: absolute;
         width: 80px;
         height: 40px; /* Half the height for semicircle */
-        background: rgba(255, 255, 255, 0.8);/* Semi-transparent body */
+        background: rgba(255, 255, 255, 0.95);/* Semi-transparent body */
         border-radius: 80px 80px 0 0;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
         top: -20px; /* Position above the jellyfish */
@@ -645,7 +601,7 @@ perspective: 500px;
 transform: rotateY(10deg) rotateX(5deg);
 } */
 
-.heading :hover {
+.heading:hover {
 transform: rotateY(15deg) rotateX(30deg) scale(1.1);
 text-shadow: 0px 0px 30px rgba(255, 255, 255, 1),
              0px 0px 50px rgba(146, 254, 157, 0.6),
@@ -671,7 +627,7 @@ perspective: 500px;
 transform: rotateY(10deg) rotateX(5deg);
 } */
 
-.subheading :hover {
+.subheading:hover {
 transform: rotateY(0deg) rotateX(0deg) scale(1.1);
 text-shadow: 0px 0px 30px rgba(255, 255, 255, 1),
              0px 0px 50px rgba(146, 254, 157, 0.6),
