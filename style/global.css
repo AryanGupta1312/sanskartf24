@@ -13,28 +13,7 @@ h1, h2 {
   font-family: 'Raleway', sans-serif;
 }
 
-header.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&fit=crop&w=1920&h=1080&q=80') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
 
-.hero-content {
-  color: white;
-  position: relative;
-  z-index: 2;
-  animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
 
 nav {
   background-color: rgba(0, 0, 0, 0.8);
@@ -253,106 +232,6 @@ footer {
 
 /* Our Goals Section Styles */
 .goals-section {
-  background-color: #e9d8a6;
-  padding: 60px 20px;
-  text-align: center;
-  border-radius: 10px;
-  margin: 40px 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.goals-title {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #005f73;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.goals-description {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  color: #005f73;
-}
-
-.goal-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.goal {
-  background-color: #005f73;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.goal:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.goal-icon {
-  margin-bottom: 15px;
-}
-
-.goal-icon img {
-  width: 50px;
-  height: 50px;
-  transition: transform 0.3s;
-}
-
-.goal:hover .goal-icon img {
-  transform: scale(1.1);
-}
-
-/* Challenges Section Styles */
-.challenges-section {
-  background-color: #f0f8ff; /* Light blue background for ocean feel */
-  padding: 60px 20px;
-  text-align: center;
-  border-radius: 10px;
-  margin: 40px 0;
-}
-
-.challenges-title {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #005f73;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.challenges-description {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  color: #005f73;
-}
-
-.challenge-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.challenge {
-  background-color: #0a9396; /* Teal background for challenges */
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.challenge:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Our Goals Section Styles */
-.goals-section {
   background-color: #e9d8a6; /* Light beige background for goals */
   padding: 60px 20px;
   text-align: center;
@@ -452,56 +331,6 @@ footer {
       background-position: 0% 50%;
   }
 }
-
-/* Resetting body margins */
-      body {
-          margin: 0;
-          font-family: Arial, sans-serif;
-          overflow: auto; /* Prevents scrolling due to video */
-      }
-
-      /* Header Section Styles */
-      .header-section {
-          position: relative; /* Positioning for layering */
-          height: 100vh; /* Full viewport height */
-          overflow: hidden; /* Ensures video is contained */
-      }
-    
-      /* Wrapper for Header Content */
-      .header-wrapper {
-          position: relative; /* Allows positioning of inner elements */
-          z-index: 1; /* Places header content above the background */
-          color: white; /* Text color */
-          text-align: center; /* Centering text */
-          padding: 80px 20px; /* Padding around header */
-      }
-
-      /* Main Title Styles */
-      .main-title {
-          font-size: 3.5em; /* Increased font size */
-          margin: 0; /* Removes default margin */
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds depth with shadow */
-      }
-
-      /* Header Description Styles */
-      .header-description {
-          font-size: 1.5em; /* Size for the description */
-          margin-top: 15px; /* Space between title and description */
-          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow for description */
-      }
-
-      /* Fallback Styles */
-      .fallback-message {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          color: white;
-          font-size: 1.5em;
-          z-index: 1; /* Above the fallback image */
-          text-align: center;
-          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow for readability */
-      }
 
 /* Resetting body margins */
       body {
@@ -802,13 +631,11 @@ footer {
         }
     }
 
-.heading {
+/* .heading {
 font-size: 5rem;
 font-weight: 700;
 color: #eee;
-background: linear-gradient(90deg, #00c9ff, #92fe9d, #ff6a88, #ff9a8b);
 background-size: 400%;
--webkit-background-clip: text;
 color: transparent;
 animation: gradientShift 5s ease-in-out infinite;
 text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8),
@@ -819,7 +646,7 @@ transition: transform 0.5s ease-in-out;
 text-transform: uppercase;
 perspective: 500px;
 transform: rotateY(10deg) rotateX(5deg);
-}
+} */
 
 .heading :hover {
 transform: rotateY(15deg) rotateX(30deg) scale(1.1);
@@ -828,13 +655,13 @@ text-shadow: 0px 0px 30px rgba(255, 255, 255, 1),
              0px 0px 80px rgba(0, 201, 255, 1);
 }
 
-.subheading p {
+/* .subheading p {
 font-size: 5rem;
 font-weight: 700;
 color: #eee;
 background: linear-gradient(90deg, #00c9ff, #92fe9d, #ff6a88, #ff9a8b);
 background-size: 400%;
-/* -webkit-background-clip: text; */
+-webkit-background-clip: text; 
 color: transparent;
 animation: gradientShift 5s ease-in-out infinite;
 text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8),
@@ -845,7 +672,7 @@ transition: transform 0.5s ease-in-out;
 text-transform: uppercase;
 perspective: 500px;
 transform: rotateY(10deg) rotateX(5deg);
-}
+} */
 
 .subheading :hover {
 transform: rotateY(0deg) rotateX(0deg) scale(1.1);
