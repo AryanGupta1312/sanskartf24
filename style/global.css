@@ -82,6 +82,7 @@ section#intro {
 }
 
 .challenge {
+  
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -569,7 +570,7 @@ footer {
         position: absolute;
         width: 80px;
         height: 40px; /* Half the height for semicircle */
-        background: rgba(255, 255, 255, 1);/* Semi-transparent body */
+        background: rgba(255, 255, 255, 0.8);/* Semi-transparent body */
         border-radius: 80px 80px 0 0;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
         top: -20px; /* Position above the jellyfish */
@@ -595,14 +596,14 @@ footer {
     /* Position tentacles for Jellyfish */
     .tentacle1 { bottom: 0; left: 10%; animation-delay: 0s; }
     .tentacle2 { bottom: 0; left: 30%; animation-delay: 0.1s; }
-    .tentacle3 { bottom: 0; left: 50%; animation-delay: 0.2s; }
+    .tentaclse3 { bottom: 0; left: 50%; animation-delay: 0.2s; }
     .tentacle4 { bottom: 0; left: 70%; animation-delay: 0.3s; }
     .tentacle5 { bottom: 0; left: 90%; animation-delay: 0.4s; }
 
     /* Jellyfish swimming animation */
     @keyframes swim-jellyfish {
       0%, 100% {
-          transform: translateY(0);
+          transform: translateY(-10%);
       }
       10% {
           transform: translateY(-10%); /* Jellyfish moves up */
