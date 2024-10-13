@@ -55,12 +55,15 @@ section#intro {
 }
 
 .ocean-img {
-  background: url('https://images.unsplash.com/photo-1496024840928-4c417adf211d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&w=800&q=80') no-repeat center center/cover;
-  height: 300px;
-  margin: 30px 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
+    display: inline-flex;
+    background: url('https://i.ibb.co/G5D3c7s/aquarium-fish-t2.jpg') no-repeat center/cover;
+    height: 700px;
+    width: 1080px;
+    overflow: hidden;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
 
 .challenge-container {
   display: grid;
@@ -574,7 +577,6 @@ footer {
       overflow: hidden;
   }
 
- 
 /* Enhanced Jellyfish Styles */
     .jellyfish {
         position: absolute;
@@ -589,10 +591,11 @@ footer {
     /* Jellyfish Head */
     .jellyfish-head {
         position: absolute;
-        width: 40px; /* Width of the head */
-        height: 40px; /* Height of the head */
-        background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(0, 204, 255, 0.5)); /* Jellyfish head color */
-        border-radius: 50%; /* Make it circular */
+        width: 80px;
+        height: 40px; /* Half the height for semicircle */
+        background: rgba(255, 255, 255, 0.5);/* Semi-transparent body */
+        border-radius: 80px 80px 0 0;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
         top: -20px; /* Position above the jellyfish */
         left: 50%;
         transform: translateX(-50%);
