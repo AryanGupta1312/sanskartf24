@@ -213,7 +213,7 @@ animate();
  */
 function init() {
   // Build the container
-  container = document.createElement( 'div' );
+  container = document.createElement( '.model' );
   document.body.appendChild( container );
 
   // Create the scene.
