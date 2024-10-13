@@ -424,6 +424,10 @@ footer {
         100% { opacity: 1; transform: translateY(0); }
     }
 
+ .fish, .jellyfish, .bubble {
+    position: absolute;
+    will-change: transform;
+}
 
 
     /* Fish animation */
@@ -436,6 +440,78 @@ footer {
         animation-timing-function: linear;
         display: block; 
     }
+
+    .fish1 {
+      top: 10%;
+      animation-duration: 15s;
+      animation: swim-left-to-right 15s linear infinite;
+      transform: scaleX(-1); 
+    }
+
+    .fish2 {
+      top: 20%;
+      animation-duration: 20s;
+      animation-delay: 3s;
+      animation: swim-right-to-left 20s linear infinite;
+    }
+
+    
+    .fish3 {
+      top: 30%;
+      animation-duration: 15s;
+      animation: swim-left-to-right 15s linear infinite;
+      transform: scaleX(-1); 
+    }
+
+    .fish4 {
+      top: 40%;
+      animation-duration: 20s;
+      animation-delay: 3s;
+      animation: swim-right-to-left 20s linear infinite;
+    }
+
+    .fish5 {
+      top: 50%;
+      animation-duration: 15s;
+      animation: swim-left-to-right 15s linear infinite;
+      transform: scaleX(-1); 
+    }
+
+    .fish6 {
+      top: 60%;
+      animation-duration: 20s;
+      animation-delay: 3s;
+      animation: swim-right-to-left 20s linear infinite;
+    }
+
+    .fish7 {
+      top: 70%;
+      animation-duration: 15s;
+      animation: swim-left-to-right 15s linear infinite;
+      transform: scaleX(-1); 
+    }
+
+    .fish8 {
+      top: 80%;
+      animation-duration: 20s;
+      animation-delay: 3s;
+      animation: swim-right-to-left 20s linear infinite;
+    }
+
+    .fish9 {
+      top: 90%;
+      animation-duration: 15s;
+      animation: swim-left-to-right 15s linear infinite;
+      transform: scaleX(-1); 
+    }
+
+    .fish10 {
+      top: 100%;
+      animation-duration: 20s;
+      animation-delay: 3s;
+      animation: swim-right-to-left 20s linear infinite;
+    }
+
 
     /* Bubbles */
     .bubble {
@@ -498,11 +574,7 @@ footer {
       overflow: hidden;
   }
 
-  .fish, .jellyfish, .bubble {
-    position: absolute;
-    will-change: transform;
-}
-
+ 
 /* Enhanced Jellyfish Styles */
     .jellyfish {
         position: absolute;
