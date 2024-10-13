@@ -1,12 +1,12 @@
 
-// Lottie Animation for Jellyfish
-lottie.loadAnimation({
-    container: document.getElementById('jellyfish-lottie'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: 'https://assets6.lottiefiles.com/packages/lf20_k8fneg5w.json' // Lottie animation for jellyfish
-});
+// //  Lottie Animation for Jellyfish
+// lottie.loadAnimation({
+//     container: document.getElementById('jellyfish-lottie'),
+//     renderer: 'svg',
+//     loop: true,
+//     autoplay: true,
+//     path: 'https://assets6.lottiefiles.com/packages/lf20_k8fneg5w.json' // Lottie animation for jellyfish
+// });
 
 // GSAP for smooth scrolling animations
 gsap.registerPlugin(ScrollTrigger);
@@ -25,17 +25,21 @@ gsap.from(".challenge", {
 });
 
  // Function to create random positions and animations for fish
- function createFish() {
+function createFish() {
     const fishes = document.querySelectorAll('.fish');
     fishes.forEach((fish) => {
-        // Set random vertical position for the fish
-        fish.style.top = Math.random() * 100 + 'vh';
-        // Randomize animation direction and duration
+        const randomTop = Math.random() * 100 + 'vh'; // Random vertical position
         const direction = Math.random() > 0.5 ? 'left' : 'right';
-        const animationDuration = Math.random() * 10 + 10; // Between 10s and 20s for slower speed
-        fish.style.animation = `swim-${direction}-to-${direction === 'left' ? 'right' : 'left'} ${animationDuration}s linear infinite`;
-        // Initial Position
-        fish.style.transform = direction === 'left' ? 'translateX(10000px)' : 'translateX(1000vw)';
+        const animationDuration = Math.random() * 10 + 10; // Random duration between 10-20s
+
+        fish.style.top = randomTop;
+
+        // Apply appropriate swim animation
+        if (direction === 'left') {
+            fish.style.animation = `swim-left-to-right ${animationDuration}s linear infinite`;
+        } else {
+            fish.style.animation = `swim-right-to-left ${animationDuration}s linear infinite`;
+        }
     });
 }
 
@@ -43,19 +47,22 @@ gsap.from(".challenge", {
 function createJellyfish() {
     const jellyfish = document.querySelectorAll('.jellyfish');
     jellyfish.forEach((jelly) => {
-        // Set random horizontal position for the jellyfish
-        const randomY = Math.random() * 100 + 'vh'; // Randomize vertical position
-        jelly.style.left = Math.random() * 100 + 'vw';
-        jelly.style.top = randomY;
+        const randomTop = Math.random() * 90 + 'vh'; // Random vertical position
+        const randomLeft = Math.random() * 100 + 'vw'; // Random horizontal position
+        jelly.style.top = randomTop;
+        jelly.style.left = randomLeft;
+        jelly.style.animation = 'swim-jellyfish 8s ease-in-out infinite';
     });
 }
 
-// Function to create bubbles at random positions
+// Function to create random positions and animations for bubbles
 function createBubbles() {
     const bubbles = document.querySelectorAll('.bubble');
     bubbles.forEach((bubble) => {
-        bubble.style.left = Math.random() * 100 + 'vw';
-        bubble.style.animationDuration = (Math.random() * 2 + 1) + 's'; // 3s to 8s
+        const randomLeft = Math.random() * 100 + 'vw'; // Random horizontal position
+        const animationDuration = Math.random() * 5 + 5 + 's'; // Random duration 5-10s
+        bubble.style.left = randomLeft;
+        bubble.style.animationDuration = animationDuration;
     });
 }
 
@@ -63,4 +70,3 @@ function createBubbles() {
 createFish();
 createJellyfish();
 createBubbles();
-

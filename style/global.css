@@ -559,7 +559,8 @@ footer {
       body, html {
         margin: 0;
         padding: 0;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: scroll;
         height: 100%;
     }
 
@@ -573,7 +574,7 @@ footer {
         overflow: hidden;
     }
     
-       .content {
+      .content {
         position: relative;
         z-index: 2;
         text-align: center;
@@ -612,7 +613,8 @@ footer {
         height: 100px;
         background: url('https://i.ibb.co/Kqtfvhf/image.png') no-repeat;
         background-size: contain;
-        /* animation: swim 15s linear infinite; */
+        animation: swim 15s linear infinite;
+        animation-timing-function: linear;
         display: block; 
     }
 
@@ -676,7 +678,7 @@ footer {
     /* Keyframes for left to right movement */
     @keyframes swim-left-to-right {
         0% {
-            transform: translateX(1400px) scaleX(-1);
+            transform: translateX(2000px) scaleX(-1);
         }
         100% {
             transform: translateX(10%) scaleX(-1);
@@ -689,7 +691,7 @@ footer {
             transform: translateX(150%); /* Start from farther back */
         }
         100% {
-            transform: translateX(1400px); /* End off-screen to the left */
+            transform: translateX(2000px); /* End off-screen to the left */
         }
     }
 
@@ -698,30 +700,34 @@ footer {
         0% {
             bottom: -50px;
             transform: scale(0.5);
+            opacity: 0;
         }
         100% {
             bottom: 100%;
             transform: scale(1.2);
+            opacity: 1;
         }
     }
 
-body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-    }
-
-    .video-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-    }
-
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+  }
   
+  .background {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+  }
+
+  .fish, .jellyfish, .bubble {
+    position: absolute;
+    will-change: transform;
+}
 
 /* Enhanced Jellyfish Styles */
     .jellyfish {
@@ -797,7 +803,6 @@ body, html {
     }
 
 .heading {
-cursor: default;
 font-size: 5rem;
 font-weight: 700;
 color: #eee;
@@ -824,7 +829,6 @@ text-shadow: 0px 0px 30px rgba(255, 255, 255, 1),
 }
 
 .subheading p {
-cursor: default;
 font-size: 5rem;
 font-weight: 700;
 color: #eee;
