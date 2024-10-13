@@ -531,7 +531,7 @@ footer {
 
 /* Style for the heading */
 .heading {
-  font-size: 3em; /* Larger font size for the title */
+  font-size: 5em; /* Larger font size for the title */
   font-weight: bold;
   margin: 0 0 20px; /* Spacing below the title */
   letter-spacing: 2px; /* Increased letter spacing */
@@ -553,7 +553,7 @@ footer {
 }
 
 .subheading {
-  font-size: 1.5em; /* Font size for the subtitle */
+  font-size: 2.5em; /* Font size for the subtitle */
   line-height: 1.5; /* Better line spacing */
   margin: 0; /* No margin */
   max-width: 600px; /* Maximum width for the subtitle */
@@ -717,12 +717,13 @@ footer {
 
     /* Jellyfish swimming animation */
     @keyframes swim-jellyfish {
-      0%, 100% {
-          transform: translateY(-10%);
-      }
-      10% {
-          transform: translateY(-10%); /* Jellyfish moves up */
-      }
+      0% {
+        transform: translateY(100vh); /* Start from bottom */
+    }
+    100% {
+        transform: translateY(-100px); /* Move upwards */
+    }
+
   }
 
     /* Jellyfish head bobbing animation */
