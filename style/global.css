@@ -15,6 +15,18 @@ body::-webkit-scrollbar{
   display: none;
 }
 
+.sdg14{
+  display: flex;
+  justify-content: left;
+  align-items: right;
+  height: 100px; /* Full height */
+  text-align: right;
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden; /* Hide overflow */
+}
+
 h1, h2 {
   font-family: 'Raleway', sans-serif;
 }
@@ -42,14 +54,14 @@ nav ul li {
   margin: 0 20px;
 }
 
-nav ul li a {
+nav ul li .link {
   color: #fff;
   text-decoration: none;
   font-size: 1.25rem;
   transition: color 0.3s;
 }
 
-nav ul li a:hover {
+nav ul li .link:hover {
   color: #94d2bd;
 }
 
@@ -461,8 +473,9 @@ footer {
     .content {
         position: relative;
         z-index: 2;
-        text-align: center;
+        text-align: left;
         padding: 100px 20px;
+        justify-content: left;
     }
 
    /* Add keyframes for animations */
