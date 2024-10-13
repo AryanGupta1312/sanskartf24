@@ -816,7 +816,7 @@ footer {
 }
 
 .t1 {
-  font-size: 2.5rem;
+  font-size: 1rem;
     color: #005c99; /* Dark blue */
     margin-bottom: 40px;
     font-weight: 600; /* Bold for heading */
@@ -824,9 +824,9 @@ footer {
 }
 
 .t2{
-  font-size: 1rem;
+  font-size: 0.5rem;
   color: #555; /* Softer color for bio */
-  line-height: 1.6;
+  line-height: 1;
   font-weight: 400;
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
