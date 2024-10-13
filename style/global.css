@@ -54,31 +54,59 @@ nav ul li a:hover {
 }
 
 .intro {
-  padding: 100px 20px;
-  text-align: center;
-  transition: background-color 0.3s ease;
-  background-color: #8dcf61;
-  border-radius: 10PX;
   display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100vh; /* Full height */
+  text-align: center;
+  background-image: url('https://example.com/background-image.jpg'); /* Background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+  color: #fff; /* White text color */
+  position: relative;
+  overflow: hidden; /* Hide overflow */
+}
+
+#intro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1; /* Place overlay behind the text */
 }
 
 .mt{
-  color: #3b3b3b;
+  position: relative;
+  z-index: 2; /* Bring text above overlay */
+  padding: 20px;
+  max-width: 600px; /* Maximum width for the container */
 }
 
 .intr{
-  font-size: 100px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 2.5em; /* Larger font size for the title */
+  font-weight: bold;
+  margin: 0 0 20px; /* Spacing below the title */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
 }
 
 .intt{
-  align-items: flex-start;
-  width: 50%;
-  margin: 0 auto;
-  font-size: x-large;
-  padding-right: 20px;
+  font-size: 1.2em; /* Font size for the paragraph */
+  line-height: 1.5; /* Better line spacing */
+  margin: 0 0 30px; /* Spacing below the paragraph */
 }
 
+@media (max-width: 768px) {
+  .intr {
+      font-size: 2em; /* Smaller title on smaller screens */
+  }
+
+  .intt {
+      font-size: 1em; /* Smaller text on smaller screens */
+  }
+}
 .inti{
   align-items: flex-end;
   width: 50%;
@@ -106,6 +134,7 @@ nav ul li a:hover {
   margin: 40px 0;
   position: relative;
   overflow: hidden;
+  margin: 10px;
 }
 
 .challenges-title{
@@ -173,6 +202,7 @@ footer {
   position: relative;
   overflow: hidden;
   margin: 40px 0;
+  margin: 10px;
 }
 
 .cta-title {
@@ -269,6 +299,7 @@ footer {
   margin: 40px 0;
   position: relative;
   overflow: hidden;
+  margin: 10px;
 }
 
 .goals-title {
