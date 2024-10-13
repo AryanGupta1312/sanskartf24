@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  background: linear-gradient(135deg, #06aeebd3 50%, #005f73 50%);
+  background: linear-gradient(135deg, #0e4985 50%, #06065d 50%);
   overflow-x: hidden;
 }
 
@@ -543,7 +543,7 @@ footer {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
  
   /* Updated color gradient */
-  background: linear-gradient(90deg, #ed0101, #a70107);
+  background: linear-gradient(90deg, #ff0800, #ff2a00);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
