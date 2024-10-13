@@ -7,7 +7,7 @@ body {
   color: white;
   background: linear-gradient(135deg, #001f3f 50%, #005f73 50%);
   overflow-x: hidden;
-  scrollbar-width: 5px;
+  scrollbar-width: 2px;
 }
 
 h1, h2 {
@@ -70,7 +70,8 @@ section#intro {
 }
 
 .challenge {
-  background-color: rgba(0, 95, 115, 0.7);
+  /* background-color: rgba(0, 95, 115, 0.7); */
+  background-color: #003c57;
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -384,6 +385,7 @@ footer {
 
     .background {
         position: absolute;
+        margin: 0;
         top: 0;
         left: 0;
         width: 100%;
@@ -450,10 +452,10 @@ footer {
     /* Keyframes for left to right movement */
     @keyframes swim-left-to-right {
         0% {
-            transform: translateX(-100vw) scaleX(-1);
+            transform: translateX(-100px);
         }
         100% {
-            transform: translateX(100vw) scaleX(-1);
+            transform: translateX(100vw);
         }
     }
 
@@ -463,7 +465,7 @@ footer {
             transform: translateX(100vw); /* Start from farther back */
         }
         100% {
-            transform: translateX(-100vw); /* End off-screen to the left */
+            transform: translateX(-100px); /* End off-screen to the left */
         }
     }
 
@@ -547,16 +549,13 @@ footer {
 
     /* Jellyfish swimming animation */
     @keyframes swim-jellyfish {
-        0% {
-            transform: translate(-50%, 0%);
-        }
-        50% {
-            transform: translate(-50%, -20%); /* Jellyfish moves up */
-        }
-        100% {
-            transform: translate(-50%, 0%); /* Jellyfish moves back down */
-        }
-    }
+      0%, 100% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-10%);
+      }
+  }
 
     /* Jellyfish head bobbing animation */
     @keyframes bob {
