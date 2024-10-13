@@ -440,7 +440,7 @@ footer {
         animation-timing-function: linear;
         display: block; 
     }
-
+/* 
     .fish1 {
       top: 10%;
       animation-duration: 15s;
@@ -510,7 +510,7 @@ footer {
       animation-duration: 20s;
       animation-delay: 3s;
       animation: swim-right-to-left 20s linear infinite;
-    }
+    } */
 
 
     /* Bubbles */
