@@ -553,7 +553,7 @@ footer {
 }
 
 .subheading {
-  font-size: 2.5em; /* Font size for the subtitle */
+  font-size: 2em; /* Font size for the subtitle */
   line-height: 1.5; /* Better line spacing */
   margin: 0; /* No margin */
   max-width: 600px; /* Maximum width for the subtitle */
@@ -602,49 +602,35 @@ footer {
 }
 
 
-    /* Fish animation */
-    .fish {
-        position: absolute;
-        width: 200px;
-        height: 100px;
-        background: url('https://i.ibb.co/Kqtfvhf/image.png') no-repeat;
-        background-size: contain;
-        animation-timing-function: linear;
-        display: block; 
-    }
+.fish-type1 {
+  width: 60px; /* Width of the first type of fish */
+  height: 30px; /* Height of the first type of fish */
+  background-color: #FF6347; /* Tomato color for fish type 1 */
+  border-radius: 15px; /* Rounded shape */
+  position: absolute;
+  bottom: 0; /* Start at the bottom */
+  transition: transform 5s linear; /* Smooth transition */
+}
 
-    .bubble {
-        position: absolute;
-        bottom: -50px;
-        width: 20px;
-        height: 20px;
-        background-color: rgba(255, 255, 255, 0.7);
-        border-radius: 50%;
-        animation: bubble-up 10s ease-in infinite;
-    }
-    
+.fish-type2 {
+  width: 50px; /* Width of the second type of fish */
+  height: 25px; /* Height of the second type of fish */
+  background-color: #4682B4; /* Steel blue color for fish type 2 */
+  border-radius: 12px; /* Rounded shape */
+  position: absolute;
+  bottom: 0; /* Start at the bottom */
+  transition: transform 4s linear; /* Smooth transition */
+}
 
-    /* Keyframes for left to right movement */
-    @keyframes swim-left-to-right {
-        0% {
-            transform: translateX(-100px);
-        }
-        100% {
-            transform: translateX(100vw);
-        }
-    }
-
-    /* Keyframes for right to left movement */
-    @keyframes swim-right-to-left {
-        0% {
-            transform: translateX(100vw) scaleX(-1); /* Start from farther back */
-        }
-        100% {
-            transform: translateX(-1000px) scaleX(-1); /* End off-screen to the left */
-        }
-    }
-
-
+/* Optional: Add some animation for fish swimming */
+@keyframes swim {
+  0% {
+      transform: translateY(100vh); /* Start from bottom */
+  }
+  100% {
+      transform: translateY(-100px); /* Move upwards */
+  }
+}
     @keyframes bubble-up {
       0% {
           transform: translateY(100px);

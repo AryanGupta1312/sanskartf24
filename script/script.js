@@ -12,23 +12,38 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     // Function to create random positions and animations for fish
-    function createFish() {
-        const fishes = document.querySelectorAll('.fish');
-        fishes.forEach((fish) => {
-            const randomTop = Math.random() * 90 + 'vh'; // Random vertical position
-            const direction = Math.random() > 0.5 ? 'left' : 'right';
-            const animationDuration = Math.random() * 5 + 5; // Random duration between 5-10s
-
-            fish.style.top = randomTop;
-
-            // Apply appropriate swim animation
-            if (direction === 'left') {
-                fish.style.animation = `swim-left-to-right ${animationDuration}s linear infinite`;
-            } else {
-                fish.style.animation = `swim-right-to-left ${animationDuration}s linear infinite`;
-            }
-        });
+    const fishType1 = document.querySelector('.fish-type1');
+    const fishType2 = document.querySelector('.fish-type2');
+    
+    // Function to create random movement for fish type 1
+    function moveFish1() {
+        const randomX1 = Math.random() * window.innerWidth; // Random X position for fish type 1
+        fishType1.style.left = `${randomX1}px`; // Set random X position
+        fishType1.style.transform = 'translateY(-100vh)'; // Move fish type 1 upwards
+    
+        // Reset position after animation
+        setTimeout(() => {
+            fishType1.style.transform = 'translateY(100vh)'; // Reset to start position
+            moveFish1(); // Call function again for continuous movement
+        }, 5000); // Duration of the animation
     }
+    
+    // Function to create random movement for fish type 2
+    function moveFish2() {
+        const randomX2 = Math.random() * window.innerWidth; // Random X position for fish type 2
+        fishType2.style.left = `${randomX2}px`; // Set random X position
+        fishType2.style.transform = 'translateY(-100vh)'; // Move fish type 2 upwards
+    
+        // Reset position after animation
+        setTimeout(() => {
+            fishType2.style.transform = 'translateY(100vh)'; // Reset to start position
+            moveFish2(); // Call function again for continuous movement
+        }, 4000); // Duration of the animation
+    }
+    
+    // Start the movement for both fish types
+    moveFish1();
+    moveFish2();    
 
     // Function to create random positions for jellyfish
     function createJellyfish() {
