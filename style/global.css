@@ -553,7 +553,7 @@ footer {
 }
 
 .subheading {
-  font-size: 1.5em; /* Font size for the subtitle */
+  font-size: 1em; /* Font size for the subtitle */
   line-height: 1.5; /* Better line spacing */
   margin: 0; /* No margin */
   max-width: 600px; /* Maximum width for the subtitle */
@@ -721,7 +721,7 @@ footer {
         transform: translateY(100vh); /* Start from bottom */
     }
     100% {
-        transform: translateY(-100px); /* Move upwards */
+        transform: translateY(-10000px); /* Move upwards */
     }
 
   }
