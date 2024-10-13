@@ -44,21 +44,14 @@ nav ul li a:hover {
   color: #94d2bd;
 }
 
-.intro {
-  background-color: #e9d8a6; /* Light beige background for goals */
-  padding: 60px 20px;
+section {
+  padding: 100px 20px;
   text-align: center;
-  border-radius: 10px;
-  margin: 40px 0;
-  position: relative;
-  overflow: hidden;
+  transition: background-color 0.3s ease;
 }
 
-.intr{
-  font-size: 2.5em;
-  padding: 20px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  color: #005f73;
+section#intro {
+  background-color: #003c57;
 }
 
 .ocean-img {
@@ -73,25 +66,18 @@ nav ul li a:hover {
   }
 
 .challenges-section{
-  background-color: #e9d8a6; /* Light beige background for goals */
-  padding: 60px 20px;
-  text-align: center;
   border-radius: 10px;
-  margin: 40px 0;
-  position: relative;
-  overflow: hidden;
+  background-color: #e9d8a6;
 }
 
 .challenges-title{
   font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #005f73;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  color: #005f73;
 }
 
 .challenges-description{
   font-size: 1.2em;
-  margin-bottom: 30px;
   color: #005f73;
 }
 
@@ -99,10 +85,10 @@ nav ul li a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
+  padding: 20px;
 }
 
 .challenge {
-  border-radius: 10px;
   background-color: #005f73;
   padding: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -482,20 +468,20 @@ footer {
     /* Keyframes for left to right movement */
     @keyframes swim-left-to-right {
         0% {
-            transform: translateX(-10px);
+            transform: translateX(-100px);
         }
         100% {
-            transform: translateX(10vw);
+            transform: translateX(100vw);
         }
     }
 
     /* Keyframes for right to left movement */
     @keyframes swim-right-to-left {
         0% {
-            transform: translateX(10vw) scaleX(-1); /* Start from farther back */
+            transform: translateX(100vw) scaleX(-1); /* Start from farther back */
         }
         100% {
-            transform: translateX(-10px) scaleX(-1); /* End off-screen to the left */
+            transform: translateX(-100px) scaleX(-1); /* End off-screen to the left */
         }
     }
 
@@ -572,37 +558,37 @@ footer {
 
     /* Jellyfish swimming animation */
     @keyframes swim-jellyfish {
-      0% {
-        transform: translateY(10vh);
-    }
-    100% {
-        transform: translateY(-2vh);  
-    }
+      0%, 100% {
+          transform: translateY(-10%);
+      }
+      10% {
+          transform: translateY(-10%); /* Jellyfish moves up */
+      }
   }
 
     /* Jellyfish head bobbing animation */
     @keyframes bob {
-      0% {
-        transform: translateY(10vh);
+        0%, 100% { top: -20px; }
+        50% { top: -15px; }
     }
-    100% {
-        transform: translateY(-2vh);  
-    }
-}
+
     /* Tentacle movement animation */
     @keyframes sway {
       0% {
-          transform: translateY(10vh);
+          transform: translateX(-50%) translateX(-5px);
+      }
+      50% {
+          transform: translateX(-50%) translateX(5px);
       }
       100% {
-          transform: translateY(-2vh);  
+          transform: translateX(-50%) translateX(-5px);
       }
   }
 
 .heading:hover {
-transform: rotateY(0deg) rotateX(0deg) scale(1.1);
+transform: rotateY(0%) rotateX(0deg) scale(1.1);
 text-shadow: 0px 0px 30px rgba(255, 255, 255, 1),
-             0px 0px 50px rgba(146, 254, 156, 0.6),
+             0px 0px 50px rgba(146, 254, 157, 0.6),
              0px 0px 80px rgba(0, 201, 255, 1);
 }
 
