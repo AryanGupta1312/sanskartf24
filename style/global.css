@@ -556,7 +556,7 @@ footer {
   font-size: 1em; /* Font size for the subtitle */
   line-height: 1.5; /* Better line spacing */
   margin: 0; /* No margin */
-  max-width: 600px; /* Maximum width for the subtitle */
+  max-width: 700px; /* Maximum width for the subtitle */
   margin: 0 auto; /* Center align */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow */
   opacity: 0;
@@ -718,10 +718,10 @@ footer {
     /* Jellyfish swimming animation */
     @keyframes swim-jellyfish {
       0% {
-        transform: translateY(100vh); /* Start from bottom */
+        transform: translateY(1000vh); /* Start from bottom */
     }
     100% {
-        transform: translateY(-10000px); /* Move upwards */
+        transform: translateY(-100px); /* Move upwards */
     }
 
   }
@@ -765,4 +765,28 @@ footer {
   margin-top: 20px;
   color: green;
   transition: opacity 0.5s ease; /* Smooth fade out */
+}
+
+.developer{
+  background-color: #94d2bd;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.developer .team{
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #021b79;
+  font-weight: 700;
+}
+
+.developer .dev{
+  font-size: 30px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.dev .dev-img{
+  display: flex;
 }
