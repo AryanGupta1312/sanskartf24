@@ -601,6 +601,12 @@ footer {
     will-change: transform;
 }
 
+#aquarium {
+  position: relative;
+  height: 100vh; /* Full viewport height for the aquarium */
+  overflow: hidden; /* Hide overflow */
+  background-color: #87CEEB; /* Light blue for the water */
+}
 
 .fish-type1 {
   width: 60px; /* Width of the first type of fish */
