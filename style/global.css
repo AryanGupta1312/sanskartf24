@@ -5,15 +5,13 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  /* background: linear-gradient(135deg, #001f3f 50%, #005f73 50%); */
+  background: linear-gradient(135deg, #001f3f 50%, #005f73 50%);
   overflow-x: hidden;
 }
 
 h1, h2 {
   font-family: 'Raleway', sans-serif;
 }
-
-
 
 nav {
   background-color: rgba(0, 0, 0, 0.9);
