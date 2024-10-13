@@ -89,10 +89,31 @@ document.getElementById('copyButton').addEventListener('click', function() {
     const linkToCopy = 'https://example.com'; // Replace this with your link
     navigator.clipboard.writeText(linkToCopy)
         .then(() => {
-            document.getElementById('message').textContent = 'Link copied to clipboard!';
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = 'Link copied to clipboard!';
+            messageElement.style.display = 'block'; // Show the message
+            
+            // Hide the message after 3 seconds
+            setTimeout(() => {
+                messageElement.style.opacity = 0; // Fade out effect
+                setTimeout(() => {
+                    messageElement.style.display = 'none'; // Hide after fade out
+                }, 500); // Match this timeout with the fade out duration
+            }, 3000); // Message will disappear after 3 seconds
         })
         .catch(err => {
-            document.getElementById('message').textContent = 'Failed to copy link.';
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = 'Failed to copy link.';
+            messageElement.style.display = 'block'; // Show the error message
+            
+            // Hide the message after 3 seconds
+            setTimeout(() => {
+                messageElement.style.opacity = 0; // Fade out effect
+                setTimeout(() => {
+                    messageElement.style.display = 'none'; // Hide after fade out
+                }, 500); // Match this timeout with the fade out duration
+            }, 3000); // Message will disappear after 3 seconds
+
             console.error('Error copying link: ', err);
         });
 });
