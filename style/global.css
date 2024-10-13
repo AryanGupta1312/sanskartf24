@@ -505,8 +505,8 @@ footer {
 
 .scroll-icon {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 40px;
+  right: 40px;
   font-size: 40px;
   color: #eee;
   transition: opacity 0.5s ease;
