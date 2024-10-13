@@ -48,16 +48,32 @@ nav ul li a:hover {
   padding: 100px 20px;
   text-align: center;
   transition: background-color 0.3s ease;
-  background-color: #003c57;
+  background-color: #8dcf61;
+  border-radius: 10PX;
+}
+
+.intr{
+  color: #005f73;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.mt{
+  margin-top: 50px;
   display: flex;
 }
 
 .intt{
+  color: #005f73;
   align-items: flex-start;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .inti{
   align-items: flex-end;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
 }
 
 .ocean-img {
@@ -487,7 +503,7 @@ footer {
             transform: translateX(100vw) scaleX(-1); /* Start from farther back */
         }
         100% {
-            transform: translateX(-100px) scaleX(-1); /* End off-screen to the left */
+            transform: translateX(-1000px) scaleX(-1); /* End off-screen to the left */
         }
     }
 
