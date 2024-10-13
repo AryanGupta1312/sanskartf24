@@ -419,37 +419,86 @@ footer {
         padding: 100px 20px;
     }
 
-    .heading {
-      font-size: 6rem; /* Large and bold to make an impact */
-      font-weight: 700; /* Strong and bold to give authority */
-      color: #ffffff; /* Clean and crisp white */
-      text-transform: uppercase; /* Formal and powerful uppercase text */
-      text-align: center;
-      letter-spacing: 3px; /* Slight spacing for a professional look */
-      line-height: 1.1;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Subtle shadow to make the text pop */
-      font-family: 'Merriweather', serif; /* Formal serif font for a competition look */
-      margin-top: 30px;
-      background: linear-gradient(to right, #0066ff, #00ccff); /* Formal yet vibrant color gradient */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; /* Modern effect by clipping text into the gradient */
-    }
-    
-    .subheading {
-      font-size: 2rem; /* Noticeable, but smaller than the heading */
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.85); /* Subtle white to keep it formal */
-      text-align: center;
-      letter-spacing: 2px; /* Refined letter spacing */
-      margin-top: 15px;
-      font-family: 'Lora', serif; /* Elegant yet formal serif font */
-      line-height: 1.5;
-    }
+   /* Add keyframes for animations */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(50px) scale(0.95);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+  }
+}
 
-    @keyframes fadeInText {
-        0% { opacity: 0; transform: translateY(-20px); }
-        100% { opacity: 1; transform: translateY(0); }
-    }
+@keyframes gradientMove {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+@keyframes floatEffect {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Style for the heading */
+.heading {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  line-height: 1.1;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  font-family: 'Merriweather', serif;
+  margin-top: 30px;
+  background: linear-gradient(90deg, #0066ff, #00ccff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s ease infinite, fadeInUp 1.2s ease-out forwards;
+  opacity: 0; /* Start hidden, animation will reveal it */
+}
+
+.subheading {
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  font-family: 'Lora', serif;
+  line-height: 1.5;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards;
+  animation-delay: 0.5s; /* Delay to create a staggered effect */
+}
+
+/* Floating effect for continuous animation */
+.float {
+  animation: floatEffect 3s ease-in-out infinite;
+}
+
+/* Add hover effect for excitement */
+.heading:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.subheading:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
 
 .fish, .jellyfish, .bubble {
     position: absolute;
@@ -599,19 +648,6 @@ footer {
       }
   }
 
-.heading:hover {
-transform: rotateY(0%) rotateX(0deg) scale(1.1);
-text-shadow: 0px 0px 30px rgba(255, 255, 255, 1),
-             0px 0px 50px rgba(146, 254, 157, 0.6),
-             0px 0px 80px rgba(0, 201, 255, 1);
-}
-
-.subheading:hover {
-transform: rotateY(0deg) rotateX(0deg) scale(1.1);
-text-shadow: 0px 0px 30px rgba(255, 255, 255, 1),
-             0px 0px 50px rgba(146, 254, 157, 0.6),
-             0px 0px 80px rgba(0, 201, 255, 1);
-}
 
 
 

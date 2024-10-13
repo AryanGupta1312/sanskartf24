@@ -59,6 +59,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+    document.addEventListener("DOMContentLoaded", function () {
+        // Add floating effect after the fade-in animation
+        setTimeout(function() {
+            document.querySelector('.heading').classList.add('float');
+            document.querySelector('.subheading').classList.add('float');
+        }, 1200); // Add the float class after the initial fade-in animation
+    });
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".challenge", {
