@@ -85,6 +85,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+document.getElementById('copyButton').addEventListener('click', function() {
+    const linkToCopy = 'https://example.com'; // Replace this with your link
+    navigator.clipboard.writeText(linkToCopy)
+        .then(() => {
+            document.getElementById('message').textContent = 'Link copied to clipboard!';
+        })
+        .catch(err => {
+            document.getElementById('message').textContent = 'Failed to copy link.';
+            console.error('Error copying link: ', err);
+        });
+});
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".challenge", {
