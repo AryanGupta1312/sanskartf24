@@ -10,40 +10,36 @@
 
 // GSAP for smooth scrolling animations
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Function to create random positions and animations for fish
-    const fishType1 = document.querySelector('.fish-type1');
-    const fishType2 = document.querySelector('.fish-type2');
-    
-    // Function to create random movement for fish type 1
-    function moveFish1() {
-        const randomX1 = Math.random() * window.innerWidth; // Random X position for fish type 1
-        fishType1.style.left = `${randomX1}px`; // Set random X position
-        fishType1.style.transform = 'translateY(-100vh)'; // Move fish type 1 upwards
-    
-        // Reset position after animation
-        setTimeout(() => {
-            fishType1.style.transform = 'translateY(100vh)'; // Reset to start position
-            moveFish1(); // Call function again for continuous movement
-        }, 5000); // Duration of the animation
-    }
-    
-    // Function to create random movement for fish type 2
-    function moveFish2() {
-        const randomX2 = Math.random() * window.innerWidth; // Random X position for fish type 2
-        fishType2.style.left = `${randomX2}px`; // Set random X position
-        fishType2.style.transform = 'translateY(-100vh)'; // Move fish type 2 upwards
-    
-        // Reset position after animation
-        setTimeout(() => {
-            fishType2.style.transform = 'translateY(100vh)'; // Reset to start position
-            moveFish2(); // Call function again for continuous movement
-        }, 4000); // Duration of the animation
-    }
-    
-    // Start the movement for both fish types
-    moveFish1();
-    moveFish2();    
+const aquarium = document.getElementById('aquarium');
+const fishCount = 10; // Total number of fish
+
+// Function to create a fish of a specific type
+function createFish(type) {
+    const fish = document.createElement('div');
+    fish.classList.add(type);
+    aquarium.appendChild(fish);
+    return fish;
+}
+
+// Function to move a single fish upwards
+function moveFish(fish, type) {
+    const randomX = Math.random() * (window.innerWidth - 60); // Adjust based on fish width
+    fish.style.left = `${randomX}px`; // Set random X position
+    fish.style.transform = 'translateY(-100vh)'; // Move fish upwards
+
+    // Reset position after animation
+    setTimeout(() => {
+        fish.style.transform = 'translateY(100vh)'; // Reset to start position
+        moveFish(fish, type); // Call function again for continuous movement
+    }, type === 'fish-type1' ? 5000 : 4000); // Duration based on fish type
+}
+
+// Create multiple fish
+for (let i = 0; i < fishCount; i++) {
+    const type = Math.random() < 0.5 ? 'fish-type1' : 'fish-type2'; // Randomly choose fish type
+    const fish = createFish(type);
+    moveFish(fish, type); // Start movement for each fish
+}
 
     // Function to create random positions for jellyfish
     function createJellyfish() {
@@ -71,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
     createFish();
     createJellyfish();
     createBubbles();
-});
+
 
 
 

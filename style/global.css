@@ -605,7 +605,7 @@ footer {
 .fish-type1 {
   width: 60px; /* Width of the first type of fish */
   height: 30px; /* Height of the first type of fish */
-  background-color: #FF6347; /* Tomato color for fish type 1 */
+  background: url('https://i.ibb.co/bv6J4mb/image.png'); /* Tomato color for fish type 1 */
   border-radius: 15px; /* Rounded shape */
   position: absolute;
   bottom: 0; /* Start at the bottom */
@@ -615,7 +615,7 @@ footer {
 .fish-type2 {
   width: 50px; /* Width of the second type of fish */
   height: 25px; /* Height of the second type of fish */
-  background-color: #4682B4; /* Steel blue color for fish type 2 */
+  background: url('https://i.ibb.co/K5sSRH6/image.png'); /* Steel blue color for fish type 2 */
   border-radius: 12px; /* Rounded shape */
   position: absolute;
   bottom: 0; /* Start at the bottom */
