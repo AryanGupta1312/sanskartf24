@@ -71,25 +71,31 @@ nav ul li a:hover {
 
 .inti{
   align-items: flex-end;
-  width: auto;
+  width: 50%;
   height: auto;
   margin: 0 auto;
 }
 
 .ocean-img {
-    display: inline-flex;
-    background: url('https://i.ibb.co/G5D3c7s/aquarium-fish-t2.jpg') no-repeat center/cover;
-    height: 700px;
-    width: 1080px;
-    overflow: hidden;
-    margin: 30px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  }
+  display: inline-flex;
+  background: url('https://i.ibb.co/G5D3c7s/aquarium-fish-t2.jpg') no-repeat center/cover;
+  height: 700px;
+  width: 1080px;
+  overflow: hidden;
+  margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
 
 .challenges-section{
   border-radius: 10px;
   background-color: #94d2bd;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .challenges-title{
@@ -414,44 +420,33 @@ footer {
     }
 
     .heading {
-        font-size: 4em;
-        margin-bottom: 20px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #eee;
-        letter-spacing: 2px;
-        animation: fadeInText 2s ease-in-out;
-        animation: gradientShift 5s ease-in-out infinite;
-        -webkit-background-clip: text; 
-        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8),
-                     0px 0px 40px rgba(146, 254, 157, 0.5),
-                     0px 0px 60px rgba(0, 201, 255, 0.7);
-        letter-spacing: 5px;
-        transition: transform 0.5s ease-in-out;
-        perspective: 500px;
-        transform: rotateY(10deg) rotateX(5deg);
+      font-size: 6rem; /* Increased for a grand, bold look */
+      font-weight: 800; /* Extra bold for emphasis */
+      background: linear-gradient(90deg, #FFD700, #FF8C00, #FF4500); /* Exotic gradient color */
+      -webkit-background-clip: text; /* Clip the background to the text */
+      color: transparent; /* Make the actual text transparent so that gradient shows */
+      text-transform: uppercase; /* Capitalize all letters */
+      text-align: center;
+      margin-top: 20px;
+      letter-spacing: 8px; /* Increased for dramatic letter spacing */
+      line-height: 1.2; /* Adjusted for better readability */
+      text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.7), 0 0 50px rgba(255, 255, 255, 0.9);
+      font-family: 'Cinzel', serif; /* Switch to a more exotic and grand font */
     }
-
+    
     .subheading {
-        font-size: 1.5em;
-        margin-bottom: 40px;
-        letter-spacing: 1.5px;
-        color: #eee;
-        animation: fadeInText 2s ease-in-out;
-        font-weight: 700;
-        background: linear-gradient(90deg, #00c9ff, #92fe9d, #ff6a88, #ff9a8b);
-        background-size: 400%;
-        -webkit-background-clip: text; 
-        color: transparent;
-        animation: gradientShift 5s ease-in-out infinite;
-        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8),
-                     0px 0px 40px rgba(146, 254, 157, 0.5),
-                     0px 0px 60px rgba(0, 201, 255, 0.7);
-        letter-spacing: 5px;
-        transition: transform 0.5s ease-in-out;
-        text-transform: uppercase;
-        perspective: 500px;
-        transform: rotateY(10deg) rotateX(5deg);
+      font-size: 6rem; /* Increased for a grand, bold look */
+      font-weight: 800; /* Extra bold for emphasis */
+      background: linear-gradient(90deg, #FFD700, #FF8C00, #FF4500); /* Exotic gradient color */
+      -webkit-background-clip: text; /* Clip the background to the text */
+      color: transparent; /* Make the actual text transparent so that gradient shows */
+      text-transform: uppercase; /* Capitalize all letters */
+      text-align: center;
+      margin-top: 20px;
+      letter-spacing: 8px; /* Increased for dramatic letter spacing */
+      line-height: 1.2; /* Adjusted for better readability */
+      text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.7), 0 0 50px rgba(255, 255, 255, 0.9);
+      font-family: 'Cinzel', serif; /* Switch to a more exotic and grand font */
     }
 
     @keyframes fadeInText {
