@@ -769,13 +769,11 @@ footer {
 }
 
 
-#developers {
+.developer {
   border-radius: 10px;
   background-color: #94d2bd;
   padding: 60px 40px;
   text-align: center;
-  border-radius: 10px;
-  margin: 40px 0;
   position: relative;
   overflow: hidden;
   margin: 10px;
@@ -816,6 +814,9 @@ footer {
   transition: transform 0.3s, box-shadow 0.3s;
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  align-items: center;
+  text-align: center;
 }
 
 .t1 {
