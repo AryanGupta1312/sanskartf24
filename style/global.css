@@ -793,6 +793,7 @@ footer {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
+  margin: 30px;
 }
 
 .dev-img{
@@ -808,6 +809,7 @@ footer {
   /* padding: 20px; */
   max-width: 300px;
   text-align: center;
+  margin: 10px;
 }
 
 .challenge:hover {
