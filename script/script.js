@@ -69,13 +69,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const Head = document.querySelector('.subheading');
         Head.classList.add('float');
         Head.style.opacity = "1";
+        const hEad = document.querySelector('.scrollIcon');
+        hEad.classList.add('float');
+        hEad.style.opacity = "1";
     }, 1200) // 1.2 seconds delay after fade-in animation
 });
 
  // JavaScript to hide icon on scroll
  window.addEventListener('scroll', function() {
     var scrollIcon = document.getElementById('scrollIcon');
-    if (window.scrollY > 100) { // Hide the icon after scrolling 100px
+    if (window.scrollY > 10) { // Hide the icon after scrolling 100px
         scrollIcon.classList.add('hidden');
     } else {
         scrollIcon.classList.remove('hidden');
