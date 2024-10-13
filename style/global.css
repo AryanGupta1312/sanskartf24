@@ -475,7 +475,7 @@ footer {
         z-index: 2;
         text-align: left;
         padding: 100px 20px;
-        justify-content: left;
+        justify-content: right;
     }
 
    /* Add keyframes for animations */
