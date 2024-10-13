@@ -503,9 +503,16 @@ footer {
   animation-delay: 0.5s; /* Delay for staggered appearance */
 }
 
-.bi-arrow-bar-down{
-  font-size: 2em;
+.scroll-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 40px;
   color: #eee;
+  transition: opacity 0.5s ease;
+}
+.hidden {
+  opacity: 0;
 }
 
 /* Floating effect for continuous animation */
