@@ -812,10 +812,10 @@ body, html {
 cursor: default;
 font-size: 5rem;
 font-weight: 700;
-color: #ffffff;
+color: #eee;
 background: linear-gradient(90deg, #00c9ff, #92fe9d, #ff6a88, #ff9a8b);
 background-size: 400%;
-/*-webkit-background-clip: text;*/
+-webkit-background-clip: text;
 color: transparent;
 animation: gradientShift 5s ease-in-out infinite;
 text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8),
@@ -839,7 +839,7 @@ text-shadow: 0px 0px 30px rgba(255, 255, 255, 1),
 cursor: default;
 font-size: 5rem;
 font-weight: 700;
-color: #ffffff;
+color: #eee;
 background: linear-gradient(90deg, #00c9ff, #92fe9d, #ff6a88, #ff9a8b);
 background-size: 400%;
 /* -webkit-background-clip: text; */
