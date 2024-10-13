@@ -62,7 +62,8 @@ nav ul li a:hover {
   background-image: url('https://example.com/background-image.jpg'); /* Background image */
   background-size: cover; /* Cover the entire section */
   background-position: center; /* Center the background image */
-  color: #fff; /* White text color */
+  border-radius: 10px;
+  margin: 10px;
   position: relative;
   overflow: hidden; /* Hide overflow */
 }
@@ -90,12 +91,14 @@ nav ul li a:hover {
   font-weight: bold;
   margin: 0 0 20px; /* Spacing below the title */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+  color: rgba(10, 248, 244, 0.775);
 }
 
 .intt{
   font-size: 2em; /* Font size for the paragraph */
   line-height: 1.5; /* Better line spacing */
   margin: 0 0 30px; /* Spacing below the paragraph */
+  color: rgba(0, 180, 177, 0.775);
 }
 
 @media (max-width: 768px) {
