@@ -24,13 +24,13 @@ gsap.from(".challenge", {
     stagger: 0.3,
 });
 
-  // Function to create random positions and animations for fish
-  function createFish() {
+ // Function to create random positions and animations for fish
+ function createFish() {
     const fishes = document.querySelectorAll('.fish');
     fishes.forEach((fish) => {
-        const randomTop = Math.random() * 100 + 'vh'; // Random vertical position
+        const randomTop = Math.random() * 90 + 'vh'; // Random vertical position
         const direction = Math.random() > 0.5 ? 'left' : 'right';
-        const animationDuration = Math.random() * 10 + 10; // Random duration between 10-20s
+        const animationDuration = Math.random() * 5 + 5; // Random duration between 5-10s
 
         fish.style.top = randomTop;
 
@@ -51,6 +51,7 @@ function createJellyfish() {
         const randomLeft = Math.random() * 100 + 'vw'; // Random horizontal position
         jelly.style.top = randomTop;
         jelly.style.left = randomLeft;
+        jelly.style.animationDelay = Math.random() * 5 + 's'; // Random delay for each jellyfish
     });
 }
 
@@ -59,9 +60,7 @@ function createBubbles() {
     const bubbles = document.querySelectorAll('.bubble');
     bubbles.forEach((bubble) => {
         const randomLeft = Math.random() * 100 + 'vw'; // Random horizontal position
-        const animationDuration = Math.random() * 5 + 5 + 's'; // Random duration 5-10s
         bubble.style.left = randomLeft;
-        bubble.style.animationDuration = animationDuration;
     });
 }
 
