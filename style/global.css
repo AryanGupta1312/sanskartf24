@@ -612,7 +612,7 @@ footer {
         height: 100px;
         background: url('https://i.ibb.co/Kqtfvhf/image.png') no-repeat;
         background-size: contain;
-        animation: swim 15s linear infinite;
+        /* animation: swim 15s linear infinite; */
         display: block; 
     }
 
@@ -685,7 +685,7 @@ footer {
 
     /* Keyframes for right to left movement */
     @keyframes swim-right-to-left {
-       0% {
+        0% {
             transform: translateX(150%); /* Start from farther back */
         }
         100% {

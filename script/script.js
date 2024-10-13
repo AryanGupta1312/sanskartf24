@@ -55,7 +55,7 @@ function createBubbles() {
     const bubbles = document.querySelectorAll('.bubble');
     bubbles.forEach((bubble) => {
         bubble.style.left = Math.random() * 100 + 'vw';
-        bubble.style.animationDuration = (Math.random() * 5 + 3) + 's'; // 3s to 8s
+        bubble.style.animationDuration = (Math.random() * 2 + 1) + 's'; // 3s to 8s
     });
 }
 
