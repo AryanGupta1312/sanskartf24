@@ -20,7 +20,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 4;
 }
 
 nav ul {
@@ -290,8 +290,6 @@ footer {
 
 /* Header Section Styles */
 .header-section {
-  background: linear-gradient(135deg, #005f73, #0a9396); /* Gradient for background */
-  animation: gradient-animation 5s ease infinite; /* Animation for dynamic effect */
   color: white; /* Text color */
   text-align: center; /* Centering text */
   padding: 80px 20px; /* Padding around header */
